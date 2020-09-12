@@ -19,14 +19,6 @@ config/name="dronification-squared"
 run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Logic="*res://Objects/Logic.tscn"
-
-[debug]
-
-settings/fps/force_fps=60
-
 [display]
 
 window/size/width=1920
