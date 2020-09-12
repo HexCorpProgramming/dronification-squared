@@ -62,10 +62,10 @@ func tick():
 		drones_rounded = int(floor(drones_literal))
 		recruits_rounded = int(ceil(recruits_literal))
 	
-	#Material production
+	#Resource production
 	materials += (resources_per_drone_per_second * assigned_drones_materials)
-	materials += (resources_per_drone_per_second * assigned_drones_money)
-	materials += (resources_per_drone_per_second * assigned_drones_science)
+	money += (resources_per_drone_per_second * assigned_drones_money)
+	science += (resources_per_drone_per_second * assigned_drones_science)
 	
 	# Update the amount of availible drones
 	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
