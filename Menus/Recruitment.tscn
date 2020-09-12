@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+[ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Hex Employee.png" type="Texture" id=4]
+[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=6]
 
 [node name="Recruitment" type="Control"]
+anchor_top = -0.000355756
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.999644
 margin_left = 1.01807
 margin_right = 1.01807
 theme = ExtResource( 1 )
@@ -15,12 +20,117 @@ __meta__ = {
 }
 
 [node name="Back" type="Button" parent="."]
-margin_left = 32.0
-margin_top = 92.0
+margin_left = 40.0
+margin_top = 100.0
 margin_right = 126.0
 margin_bottom = 132.0
 text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 962.289
+margin_top = 50.7253
+margin_right = 1917.29
+margin_bottom = 226.725
+custom_fonts/font = ExtResource( 5 )
+text = "RECRUITMENT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 773.711
+margin_top = 211.187
+margin_right = 1893.71
+margin_bottom = 260.187
+text = "Propaganda and human resource inventory management facility"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_left = 1126.0
+margin_top = 284.0
+margin_right = 1862.0
+margin_bottom = 542.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 734.0
+margin_bottom = 256.0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+margin_right = 732.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 6 )
+text = "Manual Recruitment"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+margin_top = 153.0
+margin_right = 732.0
+margin_bottom = 254.0
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+margin_right = 547.0
+margin_bottom = 101.0
+text = "You will obtain more recruits.
+It feels good to obey."
+
+[node name="RecruitmentButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 551.0
+margin_right = 724.0
+margin_bottom = 101.0
+text = "CLICK ME"
+
+[node name="AutoRecruitersContainer" type="PanelContainer" parent="."]
+margin_left = 1125.65
+margin_top = 656.628
+margin_right = 1861.65
+margin_bottom = 966.628
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AutoRecruitersContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 734.0
+margin_bottom = 308.0
+
+[node name="Label" type="Label" parent="AutoRecruitersContainer/VBoxContainer"]
+margin_right = 732.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 6 )
+text = "Auto-Recruiters"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AutoRecruitersContainer/VBoxContainer"]
+margin_top = 153.0
+margin_right = 732.0
+margin_bottom = 306.0
+
+[node name="Label" type="Label" parent="AutoRecruitersContainer/VBoxContainer/HBoxContainer"]
+margin_right = 555.0
+margin_bottom = 153.0
+text = "Recruits per second: xxx (+xx)
+Auto-recruiters: xxx (+x)
+Cost: xx money xx materials"
+
+[node name="BuyRecruitersButton" type="Button" parent="AutoRecruitersContainer/VBoxContainer/HBoxContainer"]
+margin_left = 559.0
+margin_right = 717.0
+margin_bottom = 153.0
+text = "    BUY    "
+
+[node name="Hex Employee" type="Sprite" parent="."]
+position = Vector2( 486.28, 841.843 )
+scale = Vector2( 0.262455, 0.262455 )
+texture = ExtResource( 4 )
 [connection signal="pressed" from="Back" to="." method="_on_back"]
