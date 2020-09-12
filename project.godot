@@ -16,7 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="dronification-squared"
+run/main_scene="res://Root.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/borderless=true
+window/size/fullscreen=true
 
 [rendering]
 
