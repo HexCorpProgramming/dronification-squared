@@ -12,7 +12,8 @@ var science = 0
 
 #Producers
 var auto_recruiters = 0 #Recruits... Recruits
-var conversion_chambers = 0 #Converts drones 
+var conversion_chambers = 0 #Converts drones
+var available_drones = 0 #Not for much longer 
 var assigned_drones_materials = 0 #Gather materials
 var assigned_drones_money = 0 #Gather money
 var assigned_drones_science = 0 #Gather science
@@ -65,6 +66,9 @@ func tick():
 	materials += (resources_per_drone_per_second * assigned_drones_materials)
 	materials += (resources_per_drone_per_second * assigned_drones_money)
 	materials += (resources_per_drone_per_second * assigned_drones_science)
+	
+	# Update the amount of availible drones
+	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
 	
 func add_recruits(amnt):
 	recruits_literal += amnt
