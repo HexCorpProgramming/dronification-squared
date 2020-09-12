@@ -1,20 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Hive Mxtress.png" type="Texture" id=3]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DronesDisplay" type="Panel" parent="."]
-margin_left = 32.0
-margin_top = 161.737
-margin_right = 544.0
-margin_bottom = 384.737
+margin_left = 814.549
+margin_top = 264.23
+margin_right = 1326.55
+margin_bottom = 487.23
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,25 +57,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="RecruitmentButton" type="Button" parent="VBoxContainer"]
 margin_right = 255.0
 margin_bottom = 40.0
 text = "RECRUITMENT"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="ConversionButton" type="Button" parent="VBoxContainer"]
 margin_top = 104.0
 margin_right = 255.0
 margin_bottom = 144.0
 text = "CONVERSION"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="OperationsButton" type="Button" parent="VBoxContainer"]
 margin_top = 208.0
 margin_right = 255.0
 margin_bottom = 248.0
 text = "OPERATIONS"
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="ResearchButton" type="Button" parent="VBoxContainer"]
 margin_top = 312.0
 margin_right = 255.0
 margin_bottom = 352.0
 text = "RESEARCH"
+
+[node name="Hive Mxtress" type="Sprite" parent="VBoxContainer/ResearchButton"]
+position = Vector2( -798.113, 517.377 )
+scale = Vector2( 0.349502, 0.349502 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="VBoxContainer/RecruitmentButton" to="." method="_on_recruitment"]
+[connection signal="pressed" from="VBoxContainer/ConversionButton" to="." method="_on_conversion"]
+[connection signal="pressed" from="VBoxContainer/OperationsButton" to="." method="_on_operations"]
+[connection signal="pressed" from="VBoxContainer/ResearchButton" to="." method="_on_research"]
