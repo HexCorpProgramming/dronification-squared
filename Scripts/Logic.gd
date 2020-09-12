@@ -1,6 +1,12 @@
 extends Node
 # This is the main node for all mathematics calculations.
 
+const RECRUITER_BASE_MATERIAL = 100
+const RECRUITER_BASE_MONEY = 200
+
+const CONVERTER_BASE_MATERIAL = 400
+const CONVERTER_BASE_MONEY = 100
+
 #Resources
 var drones_literal: float = 0
 var drones_rounded: int = 0
