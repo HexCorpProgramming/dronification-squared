@@ -39,7 +39,7 @@ margin_right = 450.0
 margin_bottom = 49.0
 text = "00000000000"
 script = ExtResource( 2 )
-LogicNumber = "recruits_literal"
+LogicNumber = "recruits_rounded"
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
 margin_left = 518.0

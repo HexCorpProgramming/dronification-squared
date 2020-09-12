@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Hive Mxtress.png" type="Texture" id=3]
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menus/NumberDisplay.gd" type="Script" id=5]
 
 [sub_resource type="Theme" id=1]
 VBoxContainer/constants/separation = 4
@@ -63,6 +64,8 @@ margin_bottom = 182.0
 custom_fonts/font = ExtResource( 4 )
 text = "0,000,000,000"
 align = 1
+script = ExtResource( 5 )
+LogicNumber = "drones_rounded"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = -0.00047849
@@ -77,28 +80,28 @@ __meta__ = {
 }
 
 [node name="RecruitmentButton" type="Button" parent="VBoxContainer"]
-margin_right = 477.0
+margin_right = 476.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 4 )
 text = "Recruitment"
 
 [node name="ConversionButton" type="Button" parent="VBoxContainer"]
 margin_top = 153.0
-margin_right = 477.0
+margin_right = 476.0
 margin_bottom = 242.0
 custom_fonts/font = ExtResource( 4 )
 text = "Conversion"
 
 [node name="OperationsButton" type="Button" parent="VBoxContainer"]
 margin_top = 306.0
-margin_right = 477.0
+margin_right = 476.0
 margin_bottom = 395.0
 custom_fonts/font = ExtResource( 4 )
 text = "Operations"
 
 [node name="ResearchButton" type="Button" parent="VBoxContainer"]
 margin_top = 459.0
-margin_right = 477.0
+margin_right = 476.0
 margin_bottom = 548.0
 custom_fonts/font = ExtResource( 4 )
 text = "Research"
