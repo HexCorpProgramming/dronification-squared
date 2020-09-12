@@ -16,3 +16,7 @@ func _on_operations():
 func _on_research():
 	visible = false
 	get_node("/root/Root/Research").visible = true
+	
+func _on_back():
+	visible = false
+	get_node("/root/Root/MainMenu").visible = true
