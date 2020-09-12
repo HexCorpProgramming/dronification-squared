@@ -13,11 +13,13 @@ var science = 0
 #Producers
 var auto_recruiters = 0 #Recruits... Recruits
 var conversion_chambers = 0 #Converts drones 
-var assigned_drones = 0 #Gather materials
+var assigned_drones_materials = 0 #Gather materials
+var assigned_drones_money = 0 #Gather money
+var assigned_drones_science = 0 #Gather science
 
 #Constants
 var recruits_per_second = 0.25
-var materials_per_drone_per_second = 0.25
+var resources_per_drone_per_second = 0.25
 var conversions_per_second = 0
 
 #Timer
@@ -34,7 +36,9 @@ func _ready():
 	
 	auto_recruiters = 0
 	conversion_chambers = 0
-	assigned_drones = 0
+	assigned_drones_materials = 0
+	assigned_drones_money = 0
+	assigned_drones_science = 0
 	
 	#Start ticking the timer.
 	tick.connect("timeout",self,"tick")
@@ -45,4 +49,9 @@ func tick():
 	recruits_literal += (recruits_per_second * auto_recruiters)
 	recruits_rounded = int(round(recruits_literal))
 	
-	materials += (materials_per_drone_per_second * assigned_drones)
+	drones_literal += (conversions_per_second * conversion_chambers)
+	drones_rounded = int(round(drones_literal))
+	
+	materials += (resources_per_drone_per_second * assigned_drones_materials)
+	materials += (resources_per_drone_per_second * assigned_drones_money)
+	materials += (resources_per_drone_per_second * assigned_drones_science)
