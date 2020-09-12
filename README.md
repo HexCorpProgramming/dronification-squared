@@ -6,12 +6,12 @@ A cookie clicker, but with drones instead. How fun~
 
 You will need Godot version 3.2.x.
 
-## Current Implemented features:
--Clicking to recruit
--Recruits being converted into drones
--Assigning drones to operations
--Resource income from Operations
--Buying buildings (Auto-recruiters and Conversion Chambers) with resources
+## Currently Implemented features in this branch:
+- Clicking to recruit
+- Recruits being converted into drones
+- Assigning drones to operations
+- Resource income from Operations
+- Buying buildings (Auto-recruiters and Conversion Chambers) with resources
 
 ## Currently Not Implemented
--Researches
+- Researches
