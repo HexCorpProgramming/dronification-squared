@@ -44,18 +44,22 @@ func _ready():
 	timer.connect("timeout",self,"tick")
 	timer.start()
 	
+	
+	#Use ceil for recruit rounding, and floor for drone rounding
+	#Makes the conversions look better in the UI :>
+
 func tick():
 	#Every tick, add resources relative to the amount of producers.
 	recruits_literal += (recruits_per_second * auto_recruiters)
-	recruits_rounded = int(round(recruits_literal))
+	recruits_rounded = int(ceil(recruits_literal))
 	
 	#Only do this if doing a recruit wont make the recruit resource go negative
 	var converted = (conversions_per_second * conversion_chambers)
 	if (recruits_literal-converted) >= 0:
 		drones_literal += converted
 		recruits_literal -= converted # Take out of recruit resource
-		drones_rounded = int(round(drones_literal))
-		recruits_rounded = int(round(recruits_literal))
+		drones_rounded = int(floor(drones_literal))
+		recruits_rounded = int(ceil(recruits_literal))
 	
 	#Material production
 	materials += (resources_per_drone_per_second * assigned_drones_materials)
@@ -64,4 +68,4 @@ func tick():
 	
 func add_recruits(amnt):
 	recruits_literal += amnt
-	recruits_rounded = int(round(recruits_literal))
+	recruits_rounded = int(ceil(recruits_literal))
