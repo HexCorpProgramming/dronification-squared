@@ -28,7 +28,7 @@ content_margin_left = 32.0
 content_margin_right = 32.0
 content_margin_top = 4.0
 content_margin_bottom = 4.0
-bg_color = Color( 0.447059, 0.27451, 0.721569, 1 )
+bg_color = Color( 0.627451, 0.2, 0.627451, 1 )
 
 [resource]
 default_font = ExtResource( 1 )

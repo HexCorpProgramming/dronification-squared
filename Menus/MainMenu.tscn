@@ -1,17 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Hive Mxtress.png" type="Texture" id=3]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=4]
+
+[sub_resource type="Theme" id=1]
+VBoxContainer/constants/separation = 4
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 0.918945
+margin_top = -0.918854
+margin_right = 0.918945
+margin_bottom = -0.918823
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Hive Mxtress" type="Sprite" parent="."]
+position = Vector2( 664.057, 1220.87 )
+scale = Vector2( 0.349502, 0.349502 )
+texture = ExtResource( 3 )
 
 [node name="DronesDisplay" type="Panel" parent="."]
 margin_left = 814.549
@@ -27,63 +40,68 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -290.0
-margin_top = -72.0
-margin_right = 290.0
-margin_bottom = 72.0
+margin_left = -292.001
+margin_top = -99.9584
+margin_right = 287.999
+margin_bottom = 108.042
+theme = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="DronesDisplay/VBoxContainer"]
 margin_right = 580.0
-margin_bottom = 40.0
-text = "DRONES:"
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 4 )
+text = "Drones:"
 align = 1
 
 [node name="DroneCount" type="Label" parent="DronesDisplay/VBoxContainer"]
-margin_top = 104.0
+margin_top = 93.0
 margin_right = 580.0
-margin_bottom = 144.0
+margin_bottom = 182.0
+custom_fonts/font = ExtResource( 4 )
 text = "0,000,000,000"
 align = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 1462.17
-margin_top = 364.49
-margin_right = 1717.17
-margin_bottom = 716.49
+anchor_left = -0.00047849
+anchor_right = 0.109938
+anchor_bottom = 0.148148
+margin_left = 1391.42
+margin_top = 264.23
+margin_right = 1656.42
+margin_bottom = 652.23
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RecruitmentButton" type="Button" parent="VBoxContainer"]
-margin_right = 255.0
-margin_bottom = 40.0
-text = "RECRUITMENT"
+margin_right = 477.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 4 )
+text = "Recruitment"
 
 [node name="ConversionButton" type="Button" parent="VBoxContainer"]
-margin_top = 104.0
-margin_right = 255.0
-margin_bottom = 144.0
-text = "CONVERSION"
+margin_top = 153.0
+margin_right = 477.0
+margin_bottom = 242.0
+custom_fonts/font = ExtResource( 4 )
+text = "Conversion"
 
 [node name="OperationsButton" type="Button" parent="VBoxContainer"]
-margin_top = 208.0
-margin_right = 255.0
-margin_bottom = 248.0
-text = "OPERATIONS"
+margin_top = 306.0
+margin_right = 477.0
+margin_bottom = 395.0
+custom_fonts/font = ExtResource( 4 )
+text = "Operations"
 
 [node name="ResearchButton" type="Button" parent="VBoxContainer"]
-margin_top = 312.0
-margin_right = 255.0
-margin_bottom = 352.0
-text = "RESEARCH"
-
-[node name="Hive Mxtress" type="Sprite" parent="VBoxContainer/ResearchButton"]
-position = Vector2( -798.113, 517.377 )
-scale = Vector2( 0.349502, 0.349502 )
-texture = ExtResource( 3 )
+margin_top = 459.0
+margin_right = 477.0
+margin_bottom = 548.0
+custom_fonts/font = ExtResource( 4 )
+text = "Research"
 [connection signal="pressed" from="VBoxContainer/RecruitmentButton" to="." method="_on_recruitment"]
 [connection signal="pressed" from="VBoxContainer/ConversionButton" to="." method="_on_conversion"]
 [connection signal="pressed" from="VBoxContainer/OperationsButton" to="." method="_on_operations"]
