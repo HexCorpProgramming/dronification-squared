@@ -1,0 +1,117 @@
+[gd_scene format=2]
+
+[node name="Header" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 28.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+margin_right = 166.0
+margin_bottom = 28.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 159.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
+margin_right = 60.0
+margin_bottom = 14.0
+text = "RECRUITS"
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 64.0
+margin_right = 152.0
+margin_bottom = 14.0
+text = "00000000000"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+margin_left = 170.0
+margin_right = 174.0
+margin_bottom = 28.0
+
+[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 178.0
+margin_right = 331.0
+margin_bottom = 28.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 146.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
+margin_right = 47.0
+margin_bottom = 14.0
+text = "MONEY"
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
+margin_left = 51.0
+margin_right = 139.0
+margin_bottom = 14.0
+text = "00000000000"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+margin_left = 335.0
+margin_right = 339.0
+margin_bottom = 28.0
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 343.0
+margin_right = 520.0
+margin_bottom = 28.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 170.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
+margin_right = 71.0
+margin_bottom = 14.0
+text = "MATERIALS"
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
+margin_left = 75.0
+margin_right = 163.0
+margin_bottom = 14.0
+text = "00000000000"
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
+margin_left = 524.0
+margin_right = 528.0
+margin_bottom = 28.0
+
+[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 532.0
+margin_right = 690.0
+margin_bottom = 28.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/PanelContainer4"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 151.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
+margin_right = 52.0
+margin_bottom = 14.0
+text = "SCIENCE"
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
+margin_left = 56.0
+margin_right = 144.0
+margin_bottom = 14.0
+text = "00000000000"
