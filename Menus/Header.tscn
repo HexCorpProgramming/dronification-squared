@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/NumberDisplay.gd" type="Script" id=2]
 
 [node name="Header" type="Panel"]
 anchor_right = 1.0
@@ -18,103 +19,111 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
-margin_right = 433.0
-margin_bottom = 48.0
+margin_right = 514.0
+margin_bottom = 57.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 401.0
-margin_bottom = 44.0
+margin_right = 482.0
+margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
-margin_right = 145.0
-margin_bottom = 40.0
+margin_right = 182.0
+margin_bottom = 49.0
 text = "RECRUITS"
 
 [node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
-margin_left = 149.0
-margin_right = 369.0
-margin_bottom = 40.0
+margin_left = 186.0
+margin_right = 450.0
+margin_bottom = 49.0
 text = "00000000000"
+script = ExtResource( 2 )
+LogicNumber = "recruits_literal"
 
 [node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-margin_left = 437.0
-margin_right = 441.0
-margin_bottom = 48.0
+margin_left = 518.0
+margin_right = 522.0
+margin_bottom = 57.0
 
 [node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 445.0
-margin_right = 844.0
-margin_bottom = 48.0
+margin_left = 526.0
+margin_right = 997.0
+margin_bottom = 57.0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 367.0
-margin_bottom = 44.0
+margin_right = 439.0
+margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
-margin_right = 111.0
-margin_bottom = 40.0
+margin_right = 139.0
+margin_bottom = 49.0
 text = "MONEY"
 
 [node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
-margin_left = 115.0
-margin_right = 335.0
-margin_bottom = 40.0
+margin_left = 143.0
+margin_right = 407.0
+margin_bottom = 49.0
 text = "00000000000"
+script = ExtResource( 2 )
+LogicNumber = "money"
 
 [node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
-margin_left = 848.0
-margin_right = 852.0
-margin_bottom = 48.0
+margin_left = 1001.0
+margin_right = 1005.0
+margin_bottom = 57.0
 
 [node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 856.0
-margin_right = 1310.0
-margin_bottom = 48.0
+margin_left = 1009.0
+margin_right = 1548.0
+margin_bottom = 57.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/PanelContainer2"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 422.0
-margin_bottom = 44.0
+margin_right = 507.0
+margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
-margin_right = 166.0
-margin_bottom = 40.0
+margin_right = 207.0
+margin_bottom = 49.0
 text = "MATERIALS"
 
 [node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
-margin_left = 170.0
-margin_right = 390.0
-margin_bottom = 40.0
+margin_left = 211.0
+margin_right = 475.0
+margin_bottom = 49.0
 text = "00000000000"
+script = ExtResource( 2 )
+LogicNumber = "materials"
 
 [node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
-margin_left = 1314.0
-margin_right = 1318.0
-margin_bottom = 48.0
+margin_left = 1552.0
+margin_right = 1556.0
+margin_bottom = 57.0
 
 [node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1322.0
-margin_right = 1740.0
-margin_bottom = 48.0
+margin_left = 1560.0
+margin_right = 2053.0
+margin_bottom = 57.0
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/PanelContainer4"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 386.0
-margin_bottom = 44.0
+margin_right = 461.0
+margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
-margin_right = 130.0
-margin_bottom = 40.0
+margin_right = 161.0
+margin_bottom = 49.0
 text = "SCIENCE"
 
 [node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
-margin_left = 134.0
-margin_right = 354.0
-margin_bottom = 40.0
+margin_left = 165.0
+margin_right = 429.0
+margin_bottom = 49.0
 text = "00000000000"
+script = ExtResource( 2 )
+LogicNumber = "science"
