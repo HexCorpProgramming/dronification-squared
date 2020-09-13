@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Assets/Hex Drone.png" type="Texture" id=5]
 [ext_resource path="res://Menus/AvailibleDroneLabel.gd" type="Script" id=6]
 [ext_resource path="res://Menus/Assigners/AssignMaterials.gd" type="Script" id=7]
 [ext_resource path="res://Menus/Assigners/AssignScience.gd" type="Script" id=8]
@@ -157,17 +158,22 @@ margin_bottom = 101.0
 text = "      +1       "
 
 [node name="Label" type="Label" parent="."]
-margin_left = 379.351
-margin_top = 362.947
-margin_right = 935.351
-margin_bottom = 543.947
+margin_left = 491.346
+margin_top = 161.357
+margin_right = 1047.35
+margin_bottom = 342.357
 custom_fonts/font = ExtResource( 3 )
-text = "Drones waiting Assignment: xxx"
+text = "Drones awaiting Assignment: xxx"
 autowrap = true
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Hex Drone" type="Sprite" parent="Label"]
+position = Vector2( -140.334, 781.049 )
+scale = Vector2( 0.267822, 0.267822 )
+texture = ExtResource( 5 )
 [connection signal="pressed" from="Back" to="." method="_on_back"]
 [connection signal="pressed" from="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer/AssignMaterials" to="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer/AssignBuisness" to="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
