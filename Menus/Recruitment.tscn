@@ -21,6 +21,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Hex Employee" type="Sprite" parent="."]
+position = Vector2( 486.28, 841.843 )
+scale = Vector2( 0.262455, 0.262455 )
+texture = ExtResource( 4 )
+
 [node name="Back" type="Button" parent="."]
 margin_left = 40.0
 margin_top = 100.0
@@ -132,11 +137,6 @@ margin_left = 559.0
 margin_right = 717.0
 margin_bottom = 153.0
 text = "    BUY    "
-
-[node name="Hex Employee" type="Sprite" parent="."]
-position = Vector2( 486.28, 841.843 )
-scale = Vector2( 0.262455, 0.262455 )
-texture = ExtResource( 4 )
 [connection signal="pressed" from="Back" to="." method="_on_back"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/RecruitmentButton" to="PanelContainer/VBoxContainer/HBoxContainer" method="_on_RecruitmentButton_pressed"]
 [connection signal="pressed" from="AutoRecruitersContainer/VBoxContainer/HBoxContainer/BuyRecruitersButton" to="AutoRecruitersContainer/VBoxContainer/HBoxContainer" method="_buy_Recruiter"]
