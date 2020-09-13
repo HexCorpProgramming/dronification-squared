@@ -9,8 +9,8 @@ func update_cost():
 	science_cost = pow(4,Logic.convert_upgrades) * Logic.RESEARCH_BASE_SCIENCE # Cost quadruples with each purchase
 
 func _process(delta):
-	$Label.set_text("Current Modifier: +" + str((Logic.convert_mod-1.00)*100.0) + "%\n" +
-					"Science to upgrade: " + str(science_cost))
+	$Label.set_text("Current Modifier: +" + Logic.format_number_int((Logic.convert_mod-1.00)*100.0) + "%\n" +
+					"Science to upgrade: " + Logic.format_number(science_cost))
 
 func _buy_Research():
 	if Logic.science >= science_cost:
