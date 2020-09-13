@@ -6,9 +6,9 @@
 [ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Menus/ResourceLabel.gd" type="Script" id=5]
 [ext_resource path="res://Menus/AvailibleDroneLabel.gd" type="Script" id=6]
-[ext_resource path="res://Menus/AssignMaterials.gd" type="Script" id=7]
-[ext_resource path="res://Menus/AssignScience.gd" type="Script" id=8]
-[ext_resource path="res://Menus/AssignMoney.gd" type="Script" id=9]
+[ext_resource path="res://Menus/Assigners/AssignMaterials.gd" type="Script" id=7]
+[ext_resource path="res://Menus/Assigners/AssignScience.gd" type="Script" id=8]
+[ext_resource path="res://Menus/Assigners/AssignMoney.gd" type="Script" id=9]
 
 [node name="Operations" type="Control"]
 anchor_right = 1.0
@@ -70,6 +70,7 @@ text = "Resources per second: xxx +(xx)
 Drones Assigned: xxx +(xx)"
 script = ExtResource( 5 )
 ResourceVar = "assigned_drones_materials"
+ModVar = "materials_mod"
 
 [node name="AssignMaterials" type="Button" parent="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer"]
 margin_left = 603.0
@@ -112,6 +113,7 @@ text = "Resources per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 script = ExtResource( 5 )
 ResourceVar = "assigned_drones_money"
+ModVar = "money_mod"
 
 [node name="AssignBuisness" type="Button" parent="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer"]
 margin_left = 603.0
@@ -154,6 +156,7 @@ text = "Resources per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 script = ExtResource( 5 )
 ResourceVar = "assigned_drones_science"
+ModVar = "science_mod"
 
 [node name="AssignScience" type="Button" parent="VBoxContainer/ScienceContainer/VBoxContainer/HBoxContainer"]
 margin_left = 603.0

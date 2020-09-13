@@ -5,15 +5,14 @@ extends Label
 # var a = 2
 # var b = "text"
 export (String) var ResourceVar
+export (String) var ModVar
 var assigned_drones
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var mod
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	assigned_drones = Logic.get(ResourceVar)
-	set_text("Resources per second: " + str(assigned_drones * Logic.resources_per_drone_per_second) + "  +(" + str(Logic.resources_per_drone_per_second) + ")\n"
+	mod = Logic.get(ModVar)
+	set_text("Resources per second: " + str(assigned_drones * Logic.resources_per_drone_per_second * mod) + "  +(" + str(Logic.resources_per_drone_per_second * mod) + ")\n"
 			+ "Drones Assigned: " + str(assigned_drones))
