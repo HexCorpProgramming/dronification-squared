@@ -19,6 +19,9 @@ __meta__ = {
 }
 
 [node name="Back" type="Button" parent="."]
+anchor_left = 0.000530275
+anchor_right = 0.00990527
+anchor_bottom = 0.00833333
 margin_left = 18.3264
 margin_top = 57.0155
 margin_right = 87.3264
@@ -64,14 +67,14 @@ margin_bottom = 254.0
 script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer"]
-margin_right = 599.0
+margin_right = 572.0
 margin_bottom = 101.0
-text = "Resources per second: xxx +(xx)
+text = "Materials per second: xxx +(xx)
 Drones Assigned: xxx +(xx)"
 
 [node name="AssignMaterials" type="Button" parent="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer"]
-margin_left = 603.0
-margin_right = 767.0
+margin_left = 576.0
+margin_right = 740.0
 margin_bottom = 101.0
 text = "      +1       "
 
@@ -94,7 +97,7 @@ margin_bottom = 256.0
 margin_right = 767.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 3 )
-text = "Buisness Integration"
+text = "Business Integration"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer/VBoxContainer"]
 margin_top = 153.0
@@ -103,14 +106,14 @@ margin_bottom = 254.0
 script = ExtResource( 9 )
 
 [node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer"]
-margin_right = 599.0
+margin_right = 533.0
 margin_bottom = 101.0
-text = "Resources per second: xxx +(xx)
+text = "Money per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 
 [node name="AssignBuisness" type="Button" parent="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer"]
-margin_left = 603.0
-margin_right = 767.0
+margin_left = 537.0
+margin_right = 701.0
 margin_bottom = 101.0
 text = "      +1       "
 
@@ -142,14 +145,14 @@ margin_bottom = 254.0
 script = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/VBoxContainer/HBoxContainer"]
-margin_right = 599.0
+margin_right = 553.0
 margin_bottom = 101.0
-text = "Resources per second: xxx +(xx)
+text = "Science per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 
 [node name="AssignScience" type="Button" parent="VBoxContainer/ScienceContainer/VBoxContainer/HBoxContainer"]
-margin_left = 603.0
-margin_right = 767.0
+margin_left = 557.0
+margin_right = 721.0
 margin_bottom = 101.0
 text = "      +1       "
 

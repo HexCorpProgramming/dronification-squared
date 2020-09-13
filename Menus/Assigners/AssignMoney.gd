@@ -3,7 +3,7 @@ extends HBoxContainer
 func _process(delta):
 	var current_mps = Logic.assigned_drones_money * Logic.resources_per_drone_per_second * Logic.money_mod
 	var addable_mps = Logic.resources_per_drone_per_second * Logic.money_mod
-	$Label.set_text("Resources per second: " + str(current_mps) + "  +(" + str(addable_mps) + ")\n"
+	$Label.set_text("Money per second: " + str(current_mps) + "  +(" + str(addable_mps) + ")\n"
 			+ "Drones Assigned: " + str(Logic.assigned_drones_money))
 
 func _assign(amount):
