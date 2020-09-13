@@ -20,7 +20,7 @@ var science = 0
 
 #Producers
 var auto_recruiters = 0 #Recruits... Recruits
-var conversion_chambers = 0 #Converts drones
+var conversion_chambers = 1 #Converts drones, first ones free! :)
 var available_drones = 0 #Not for much longer 
 var assigned_drones_materials = 0 #Gather materials
 var assigned_drones_money = 0 #Gather money
@@ -67,11 +67,11 @@ func _ready():
 	#Start ticking the timer.
 	timer.connect("timeout",self,"tick")
 	timer.start()
-	
-	
+
+
+
 	#Use ceil for recruit rounding, and floor for drone rounding
 	#Makes the conversions look better in the UI :>
-
 func tick():
 	#Every tick, add resources relative to the amount of producers.
 	recruits_literal += (recruits_per_second * auto_recruiters*recruit_mod)
