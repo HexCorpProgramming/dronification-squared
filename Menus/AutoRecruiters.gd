@@ -12,7 +12,9 @@ func update_cost():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Label.set_text("Recruits per second: " + str(Logic.auto_recruiters * Logic.recruits_per_second* Logic.recruit_mod) + " (+" + str(Logic.recruits_per_second*Logic.recruit_mod) + ") \n" +
+	var current_rps = Logic.auto_recruiters * Logic.recruits_per_second* Logic.recruit_mod
+	var addable_rps = Logic.recruits_per_second*Logic.recruit_mod
+	$Label.set_text("Recruits per second: " + str(current_rps) + " (+" + str(addable_rps) + ") \n" +
 					"Auto-recruiters: " + str(Logic.auto_recruiters) +" (+1)\n" +
 					"Cost: " + str(money_cost) + " money " + str(material_cost) +" materials")
 

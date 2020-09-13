@@ -12,7 +12,9 @@ func update_cost():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Label.set_text("Drones per second: " + str(Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod) + " (+" + str(Logic.conversions_per_second*Logic.convert_mod) + ") \n" +
+	var current_dps = Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod
+	var addable_dps = Logic.conversions_per_second*Logic.convert_mod
+	$Label.set_text("Drones per second: " + str(current_dps) + " (+" + str(addable_dps) + ") \n" +
 					"Auto-recruiters: " + str(Logic.conversion_chambers) +" (+1)\n" +
 					"Cost: " + str(money_cost) + " money " + str(material_cost) +" materials")
 
