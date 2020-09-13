@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Menus/Assigners/AssignMaterials.gd" type="Script" id=7]
 [ext_resource path="res://Menus/Assigners/AssignScience.gd" type="Script" id=8]
 [ext_resource path="res://Menus/Assigners/AssignMoney.gd" type="Script" id=9]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
 
 [node name="Operations" type="Control"]
 anchor_right = 1.0
@@ -24,18 +25,7 @@ position = Vector2( 351.012, 942.406 )
 scale = Vector2( 0.267822, 0.267822 )
 texture = ExtResource( 5 )
 
-[node name="Back" type="Button" parent="."]
-anchor_left = 0.000530275
-anchor_right = 0.00990527
-anchor_bottom = 0.00833333
-margin_left = 18.3264
-margin_top = 57.0155
-margin_right = 87.3264
-margin_bottom = 97.0155
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Back" parent="." instance=ExtResource( 10 )]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 1088.15
