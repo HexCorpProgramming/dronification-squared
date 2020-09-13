@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/HexCorpHexagon.png" type="Texture" id=1]
+[ext_resource path="res://Menus/Fonts/UIFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Obey.gd" type="Script" id=4]
+
+[node name="Intro Root" type="Node2D"]
+
+[node name="HexCorpHexagon" type="Sprite" parent="."]
+position = Vector2( 1678.92, 845.085 )
+scale = Vector2( 3.07425, 3.07425 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 259.424
+margin_top = 239.95
+margin_right = 1906.42
+margin_bottom = 1095.95
+custom_fonts/font = ExtResource( 2 )
+text = "Hello, applicant. 
+
+Thank you for applying to join this HexCorp Dronification Facility.
+You have been selected to be the Hive Mxtress’ secretary. 
+Your role will consist of administering this facility for the benefit of HexCorp. 
+your task is to focus on the management of this facility. You will gather recruits. 
+You will dronify them. You will obtain resources. You will increase production.
+
+Commence task now."
+
+[node name="Obey" type="Button" parent="."]
+margin_left = 1572.49
+margin_top = 738.008
+margin_right = 1783.49
+margin_bottom = 953.008
+custom_fonts/font = ExtResource( 3 )
+text = "Obey"
+flat = true
+script = ExtResource( 4 )
