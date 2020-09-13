@@ -2,9 +2,9 @@ extends Node
 # This is the main node for all mathematics calculations.
 
 const RECRUITER_BASE_MATERIAL = 100
-const RECRUITER_BASE_MONEY = 200
+const RECRUITER_BASE_MONEY = 400
 
-const CONVERTER_BASE_MATERIAL = 400
+const CONVERTER_BASE_MATERIAL = 200
 const CONVERTER_BASE_MONEY = 100
 
 const RESEARCH_BASE_SCIENCE = 100
