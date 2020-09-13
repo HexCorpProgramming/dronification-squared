@@ -7,7 +7,6 @@ A cookie clicker, but with drones instead. How fun~
 You will need Godot version 3.2.x.
 
 ## TODO
-- Change drone assignment to be consistent with the other spending of resource code (Buying buildings and researches have a script for each building and research, assignment got something different that i want to change to make more consistent)
 - Use more global functions for the display of numbers 
 
 ## Currently Implemented features in this branch:
