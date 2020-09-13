@@ -68,7 +68,6 @@ script = ExtResource( 5 )
 LogicNumber = "drones_rounded"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_left = -0.00047849
 anchor_right = 0.109938
 anchor_bottom = 0.148148
 margin_left = 1391.42

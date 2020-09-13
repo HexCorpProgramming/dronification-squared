@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+<<<<<<< Updated upstream
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Assets/Hex Drone.png" type="Texture" id=5]
@@ -10,6 +11,14 @@
 [ext_resource path="res://Menus/Assigners/AssignScience.gd" type="Script" id=8]
 [ext_resource path="res://Menus/Assigners/AssignMoney.gd" type="Script" id=9]
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
+=======
+[ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menus/Assigners/AssignMaterials.gd" type="Script" id=5]
+[ext_resource path="res://Menus/Assigners/AssignMoney.gd" type="Script" id=6]
+[ext_resource path="res://Menus/Assigners/AssignScience.gd" type="Script" id=7]
+[ext_resource path="res://Menus/AvailibleDroneLabel.gd" type="Script" id=8]
+>>>>>>> Stashed changes
 
 [node name="Operations" type="Control"]
 anchor_right = 1.0
@@ -39,7 +48,7 @@ __meta__ = {
 [node name="MaterialContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_right = 771.0
 margin_bottom = 258.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,14 +62,14 @@ margin_bottom = 256.0
 [node name="Label" type="Label" parent="VBoxContainer/MaterialContainer/VBoxContainer"]
 margin_right = 767.0
 margin_bottom = 89.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Material Acquisition"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer/VBoxContainer"]
 margin_top = 153.0
 margin_right = 767.0
 margin_bottom = 254.0
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="VBoxContainer/MaterialContainer/VBoxContainer/HBoxContainer"]
 margin_right = 572.0
@@ -78,7 +87,7 @@ text = "      +1       "
 margin_top = 322.0
 margin_right = 771.0
 margin_bottom = 580.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -92,14 +101,14 @@ margin_bottom = 256.0
 [node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/VBoxContainer"]
 margin_right = 767.0
 margin_bottom = 89.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Business Integration"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer/VBoxContainer"]
 margin_top = 153.0
 margin_right = 767.0
 margin_bottom = 254.0
-script = ExtResource( 9 )
+script = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/VBoxContainer/HBoxContainer"]
 margin_right = 533.0
@@ -117,7 +126,7 @@ text = "      +1       "
 margin_top = 644.0
 margin_right = 771.0
 margin_bottom = 902.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,14 +140,14 @@ margin_bottom = 256.0
 [node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/VBoxContainer"]
 margin_right = 767.0
 margin_bottom = 89.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Experimentation"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer/VBoxContainer"]
 margin_top = 153.0
 margin_right = 767.0
 margin_bottom = 254.0
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/VBoxContainer/HBoxContainer"]
 margin_right = 553.0
@@ -153,14 +162,23 @@ margin_bottom = 101.0
 text = "      +1       "
 
 [node name="Label" type="Label" parent="."]
+<<<<<<< Updated upstream
 margin_left = 491.346
 margin_top = 161.357
 margin_right = 1047.35
 margin_bottom = 342.357
 custom_fonts/font = ExtResource( 3 )
 text = "Drones awaiting Assignment: xxx"
+=======
+margin_left = 379.351
+margin_top = 362.947
+margin_right = 935.351
+margin_bottom = 543.947
+custom_fonts/font = ExtResource( 4 )
+text = "Drones waiting Assignment: xxx"
+>>>>>>> Stashed changes
 autowrap = true
-script = ExtResource( 6 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
