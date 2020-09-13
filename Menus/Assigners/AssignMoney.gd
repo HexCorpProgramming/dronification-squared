@@ -1,8 +1,12 @@
-extends Button
+extends HBoxContainer
 
-export (int) var AssignAmt
+func _process(delta):
+	var current_mps = Logic.assigned_drones_money * Logic.resources_per_drone_per_second * Logic.money_mod
+	var addable_mps = Logic.resources_per_drone_per_second * Logic.money_mod
+	$Label.set_text("Resources per second: " + str(current_mps) + "  +(" + str(addable_mps) + ")\n"
+			+ "Drones Assigned: " + str(Logic.assigned_drones_money))
 
-func _assign():
-	if Logic.available_drones >= AssignAmt:
-		Logic.assigned_drones_money += AssignAmt
-		Logic.available_drones -= AssignAmt
+func _assign(amount):
+	if Logic.available_drones >= amount:
+		Logic.assigned_drones_money += amount
+		Logic.available_drones -= amount
