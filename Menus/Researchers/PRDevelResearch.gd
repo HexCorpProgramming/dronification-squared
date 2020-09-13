@@ -16,5 +16,5 @@ func _buy_Research():
 	if Logic.science >= science_cost:
 		Logic.science -= science_cost
 		Logic.recruit_upgrades += 1
-		Logic.recruit_mod = (pow(2, Logic.recrui_upgrades-1) * Logic.upgrade_boost)+1.00
+		Logic.recruit_mod = (pow(2, Logic.recruit_upgrades-1) * Logic.upgrade_boost)+1.00
 		update_cost()
