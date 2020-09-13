@@ -1,31 +1,37 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/HeaderTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/NumberDisplay.gd" type="Script" id=2]
+[ext_resource path="res://Menus/Fonts/ResourceMonospace.tres" type="DynamicFont" id=3]
 
-[node name="Header" type="Panel"]
+[node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
-margin_bottom = 28.0
+margin_right = -147.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 1920, 0 )
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
-margin_right = 514.0
+margin_left = 62.0
+margin_right = 546.0
 margin_bottom = 57.0
+rect_min_size = Vector2( 480, 0 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 482.0
+margin_right = 484.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
@@ -33,28 +39,36 @@ margin_right = 182.0
 margin_bottom = 49.0
 text = "RECRUITS"
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
-margin_left = 186.0
-margin_right = 450.0
+[node name="Control" type="Control" parent="HBoxContainer/PanelContainer/HBoxContainer"]
+margin_left = 182.0
+margin_right = 452.0
 margin_bottom = 49.0
-text = "00000000000"
+rect_min_size = Vector2( 270, 49 )
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer/Control"]
+margin_top = -4.0
+margin_right = 192.0
+margin_bottom = 52.5283
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+text = "00000000"
+align = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 LogicNumber = "recruits_rounded"
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-margin_left = 518.0
-margin_right = 522.0
-margin_bottom = 57.0
-
 [node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 526.0
-margin_right = 997.0
+margin_left = 546.0
+margin_right = 1026.0
 margin_bottom = 57.0
+rect_min_size = Vector2( 480, 0 )
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 439.0
+margin_right = 480.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
@@ -62,28 +76,35 @@ margin_right = 139.0
 margin_bottom = 49.0
 text = "MONEY"
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
-margin_left = 143.0
-margin_right = 407.0
+[node name="Control2" type="Control" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
+margin_left = 139.0
+margin_right = 439.0
 margin_bottom = 49.0
-text = "00000000000"
+rect_min_size = Vector2( 300, 49 )
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2/Control2"]
+margin_top = -4.0
+margin_right = 192.0
+margin_bottom = 52.5283
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+text = "00000000"
+align = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 LogicNumber = "money"
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
-margin_left = 1001.0
-margin_right = 1005.0
-margin_bottom = 57.0
-
 [node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1009.0
-margin_right = 1548.0
+margin_left = 1026.0
+margin_right = 1465.0
 margin_bottom = 57.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/PanelContainer2"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 507.0
+margin_right = 439.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
@@ -91,28 +112,35 @@ margin_right = 207.0
 margin_bottom = 49.0
 text = "MATERIALS"
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
-margin_left = 211.0
-margin_right = 475.0
+[node name="Control3" type="Control" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
+margin_left = 207.0
+margin_right = 407.0
 margin_bottom = 49.0
-text = "00000000000"
+rect_min_size = Vector2( 200, 49 )
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3/Control3"]
+margin_top = -4.0
+margin_right = 192.0
+margin_bottom = 52.5283
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+text = "00000000"
+align = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 LogicNumber = "materials"
 
-[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
-margin_left = 1552.0
-margin_right = 1556.0
-margin_bottom = 57.0
-
 [node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1560.0
-margin_right = 2053.0
+margin_left = 1465.0
+margin_right = 1858.0
 margin_bottom = 57.0
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/PanelContainer4"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 461.0
+margin_right = 393.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
@@ -120,10 +148,22 @@ margin_right = 161.0
 margin_bottom = 49.0
 text = "SCIENCE"
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
-margin_left = 165.0
-margin_right = 429.0
+[node name="Control4" type="Control" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
+margin_left = 161.0
+margin_right = 361.0
 margin_bottom = 49.0
-text = "00000000000"
+rect_min_size = Vector2( 200, 49 )
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4/Control4"]
+margin_top = -4.0
+margin_right = 192.0
+margin_bottom = 52.5283
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+text = "00000000"
+align = 2
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 LogicNumber = "science"

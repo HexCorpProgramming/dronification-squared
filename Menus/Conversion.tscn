@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Menus/ConversionChambers.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Brainwashed Drone.png" type="Texture" id=6]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=7]
 
 [node name="Conversion" type="Control"]
 anchor_right = 1.0
@@ -16,12 +18,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="."]
-margin_left = 31.5621
-margin_top = 66.1787
-margin_right = 100.562
-margin_bottom = 106.179
-text = "Back"
+[node name="Brainwashed Drone" type="Sprite" parent="."]
+position = Vector2( 610.06, 870.267 )
+scale = Vector2( 0.253968, 0.253968 )
+texture = ExtResource( 6 )
+
+[node name="Back" parent="." instance=ExtResource( 7 )]
 
 [node name="ConversionChambersContainer" type="PanelContainer" parent="."]
 margin_left = 1125.65

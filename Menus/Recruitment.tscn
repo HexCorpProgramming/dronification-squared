@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Menus/RecruitmentButton.gd" type="Script" id=7]
 [ext_resource path="res://Menus/AutoRecruiters.gd" type="Script" id=8]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=9]
 
 [node name="Recruitment" type="Control"]
 anchor_top = -0.000355756
@@ -21,15 +22,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 100.0
-margin_right = 126.0
-margin_bottom = 132.0
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Hex Employee" type="Sprite" parent="."]
+position = Vector2( 486.28, 841.843 )
+scale = Vector2( 0.262455, 0.262455 )
+texture = ExtResource( 4 )
+
+[node name="Back" parent="." instance=ExtResource( 9 )]
 
 [node name="Label" type="Label" parent="."]
 margin_left = 962.289
@@ -132,11 +130,6 @@ margin_left = 559.0
 margin_right = 717.0
 margin_bottom = 153.0
 text = "    BUY    "
-
-[node name="Hex Employee" type="Sprite" parent="."]
-position = Vector2( 486.28, 841.843 )
-scale = Vector2( 0.262455, 0.262455 )
-texture = ExtResource( 4 )
 [connection signal="pressed" from="Back" to="." method="_on_back"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/HBoxContainer/RecruitmentButton" to="PanelContainer/VBoxContainer/HBoxContainer" method="_on_RecruitmentButton_pressed"]
 [connection signal="pressed" from="AutoRecruitersContainer/VBoxContainer/HBoxContainer/BuyRecruitersButton" to="AutoRecruitersContainer/VBoxContainer/HBoxContainer" method="_buy_Recruiter"]

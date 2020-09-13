@@ -1,4 +1,4 @@
 extends Label
 
 func _process(delta):
-	set_text("Drones waiting Assignment: " + str(Logic.available_drones))
+	set_text("Drones awaiting Assignment: " + str(Logic.available_drones))

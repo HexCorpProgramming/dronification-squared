@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Menus/Researchers/ClericalResearch.gd" type="Script" id=7]
 [ext_resource path="res://Menus/Researchers/DroneTestingResearch.gd" type="Script" id=8]
 [ext_resource path="res://Menus/Researchers/MiningResearch.gd" type="Script" id=9]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
 
 [node name="Research" type="Control"]
 anchor_right = 1.0
@@ -19,12 +20,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="."]
-margin_left = 31.5621
-margin_top = 60.0699
-margin_right = 100.562
-margin_bottom = 100.07
-text = "Back"
+[node name="Back" parent="." instance=ExtResource( 10 )]
 
 [node name="PRDevelContainer" type="PanelContainer" parent="."]
 margin_left = 434.488

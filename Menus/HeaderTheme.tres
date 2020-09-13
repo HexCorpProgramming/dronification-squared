@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://Menus/Fonts/UIFont.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.239216, 0.6, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.4, 1, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.627451, 0.2, 0.627451, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 32.0
+content_margin_right = 0.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 1, 0.4, 1, 1 )
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 2 )
+HBoxContainer/constants/separation = 0
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+Panel/styles/panel = SubResource( 4 )
+PanelContainer/styles/panel = SubResource( 4 )
+VBoxContainer/constants/separation = 64
