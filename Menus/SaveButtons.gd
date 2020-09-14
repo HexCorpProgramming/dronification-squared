@@ -1,4 +1,4 @@
-extends Panel
+extends HBoxContainer
 
 
 func save_game():
@@ -12,5 +12,6 @@ func load_game():
 	var save_file = File.new()
 	save_file.open("user://savefile.save", File.READ)
 	var save_data = parse_json(save_file.get_line())
-	Logic.parse_dict(save_data)
+	if save_data != null:
+		Logic.parse_dict(save_data)
 	save_file.close()
