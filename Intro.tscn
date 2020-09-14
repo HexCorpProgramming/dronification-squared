@@ -7,6 +7,14 @@
 
 [node name="Intro Root" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="HexCorpHexagon" type="Sprite" parent="."]
 position = Vector2( 1678.92, 845.085 )
 scale = Vector2( 3.07425, 3.07425 )
