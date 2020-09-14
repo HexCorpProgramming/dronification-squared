@@ -11,7 +11,7 @@ func update_cost():
 	money_cost = pow(2,(Logic.conversion_chambers-1)) * Logic.CONVERTER_BASE_MONEY # -1 to account for the free one
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var current_dps = Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod
 	var addable_dps = Logic.conversions_per_second*Logic.convert_mod
 	$Label.set_text("Drones per second: " + Logic.format_number(current_dps) + " (+" + str(addable_dps) + ") \n" +

@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-func _process(delta):
+func _process(_delta):
 	var current_sps = Logic.assigned_drones_science * Logic.resources_per_drone_per_second * Logic.science_mod
 	var addable_sps = Logic.resources_per_drone_per_second * Logic.science_mod
 	$Label.set_text("Science per second: " + Logic.format_number(current_sps) + "  +(" + str(addable_sps) + ")\n"
