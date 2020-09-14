@@ -26,3 +26,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Start"
 flat = true
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
