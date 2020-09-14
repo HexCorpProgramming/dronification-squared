@@ -1,7 +1,6 @@
 # Godot-specific ignores
 .import/
 export.cfg
-export_presets.cfg
 
 # Mono-specific ignores
 .mono/
@@ -14,3 +13,6 @@ data_*/
 
 # MacOS-specific ignores
 .DS-store
+
+# directory for releases
+Build/
