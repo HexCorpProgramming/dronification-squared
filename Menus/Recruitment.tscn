@@ -50,30 +50,31 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 1126.0
-margin_top = 284.0
-margin_right = 1854.0
-margin_bottom = 542.0
+margin_left = 845.384
+margin_top = 288.49
+margin_right = 1609.38
+margin_bottom = 546.49
 theme = ExtResource( 6 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 726.0
+margin_right = 762.0
 margin_bottom = 256.0
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-margin_right = 724.0
+margin_right = 760.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 3 )
 text = "Manual Recruitment"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
 margin_top = 153.0
-margin_right = 724.0
+margin_right = 760.0
 margin_bottom = 254.0
 script = ExtResource( 7 )
 
@@ -85,35 +86,36 @@ It feels good to obey."
 
 [node name="RecruitmentButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 margin_left = 551.0
-margin_right = 724.0
+margin_right = 760.0
 margin_bottom = 101.0
 text = "CLICK ME"
 
 [node name="AutoRecruitersContainer" type="PanelContainer" parent="."]
-margin_left = 1125.65
-margin_top = 656.628
-margin_right = 1861.65
-margin_bottom = 966.628
+margin_left = 845.034
+margin_top = 661.118
+margin_right = 1602.03
+margin_bottom = 971.118
 theme = ExtResource( 6 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="AutoRecruitersContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 734.0
+margin_right = 755.0
 margin_bottom = 308.0
 
 [node name="Label" type="Label" parent="AutoRecruitersContainer/VBoxContainer"]
-margin_right = 732.0
+margin_right = 753.0
 margin_bottom = 89.0
 custom_fonts/font = ExtResource( 3 )
 text = "Auto-Recruiters"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="AutoRecruitersContainer/VBoxContainer"]
 margin_top = 153.0
-margin_right = 732.0
+margin_right = 753.0
 margin_bottom = 306.0
 script = ExtResource( 8 )
 
@@ -126,7 +128,7 @@ Cost: xx money xx materials"
 
 [node name="BuyRecruitersButton" type="Button" parent="AutoRecruitersContainer/VBoxContainer/HBoxContainer"]
 margin_left = 559.0
-margin_right = 717.0
+margin_right = 753.0
 margin_bottom = 153.0
 text = "    BUY    "
 [connection signal="pressed" from="Back" to="." method="_on_back"]
