@@ -7,6 +7,14 @@
 
 [node name="Start Root" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="hexcorplogo" type="Sprite" parent="."]
 position = Vector2( 951.159, 309.497 )
 scale = Vector2( 2.12369, 2.12369 )
