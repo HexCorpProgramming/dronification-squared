@@ -97,6 +97,74 @@ func add_recruits(amnt):
 	recruits_literal += amnt
 	recruits_rounded = int(ceil(recruits_literal))
 
+func create_dict():
+	var save_dict = {
+		# Resources
+		"drones" : drones_literal,
+		"recruits" : recruits_literal,
+		"money" : money,
+		"materials" : materials,
+		"science" : science,
+		# Buildings
+		"auto_recruiters" : auto_recruiters,
+		"conversion_chambers" : conversion_chambers,
+		# Assignments
+		"assigned_money" : assigned_drones_money,
+		"assigned_materials" : assigned_drones_materials,
+		"assigned_science" : assigned_drones_science,
+		# Researches
+		"recruit_upgrades" : recruit_upgrades,
+		"convert_upgrades" : convert_upgrades,
+		"money_upgrades" : money_upgrades,
+		"materials_upgrades" : materials_upgrades,
+		"science_upgrades" : science_upgrades
+	}
+	
+	return save_dict
+
+func parse_dict(dict):
+	#load all data
+	drones_literal = dict["drones"]
+	recruits_literal = dict["recruits"]
+	money = dict["money"]
+	materials = dict["materials"]
+	science = dict["science"]
+	
+	auto_recruiters = dict["auto_recruiters"]
+	conversion_chambers = dict["conversion_chambers"]
+	
+	assigned_drones_money = dict["assigned_money"]
+	assigned_drones_materials = dict["assigned_materials"]
+	assigned_drones_science = dict["assigned_science"]
+	
+	recruit_upgrades = dict["recruit_upgrades"]
+	convert_upgrades = dict["convert_upgrades"]
+	money_upgrades = dict["money_upgrades"]
+	materials_upgrades = dict["materials_upgrades"]
+	science_upgrades = dict["science_upgrades"]
+	
+	#Update mods
+	if recruit_upgrades != 0:
+		recruit_mod = (pow(2, Logic.recruit_upgrades-1) * Logic.upgrade_boost)+1.00
+	else:
+		recruit_mod = 1.00
+	if convert_upgrades != 0:
+		convert_mod = (pow(2, Logic.convert_upgrades-1) * Logic.upgrade_boost)+1.00
+	else:
+		convert_mod = 1.00
+	if money_upgrades != 0:
+		money_mod = (pow(2, Logic.money_upgrades-1) * Logic.upgrade_boost)+1.00
+	else:
+		money_mod = 1.00
+	if materials_upgrades != 0:
+		materials_mod = (pow(2, Logic.materials_upgrades-1) * Logic.upgrade_boost)+1.00
+	else:
+		materials_mod = 1.00
+	if science_upgrades != 0:
+		science_mod = (pow(2, Logic.science_upgrades-1) * Logic.upgrade_boost)+1.00
+	else:
+		science_mod = 1.00
+	
 func format_number(number):
 	var result
 	var label = ""
@@ -116,7 +184,6 @@ func format_number(number):
 	elif logo >= 3:
 		label = "K"
 		offset = 3
-
 	
 	#Then limit it to 4 digits
 	var digits = (log(number) / log(10)) - offset
@@ -158,7 +225,6 @@ func format_number_int(number):
 	elif logo >= 3:
 		label = "K"
 		offset = 3
-
 	
 	#Then limit it to 4 digits
 	var digits = (log(number) / log(10)) - offset
