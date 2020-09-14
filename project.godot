@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Logic="*res://Objects/Logic.tscn"
+Global="*res://Scripts/Global.gd"
 
 [display]
 
