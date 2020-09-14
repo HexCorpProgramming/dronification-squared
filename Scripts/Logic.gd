@@ -9,6 +9,8 @@ const CONVERTER_BASE_MONEY = 100
 
 const RESEARCH_BASE_SCIENCE = 100
 
+const TICK_MOD = 5.0 # x ticks per second, 
+
 #Resources
 var drones_literal: float = 0
 var drones_rounded: int = 0
@@ -65,8 +67,9 @@ func _ready():
 	assigned_drones_science = 0
 	
 	#Start ticking the timer.
+	timer.set_wait_time(1.0/TICK_MOD)
 	timer.connect("timeout",self,"tick")
-	timer.start()
+	timer.start(1.0/TICK_MOD)
 
 
 
@@ -74,21 +77,21 @@ func _ready():
 	#Makes the conversions look better in the UI :>
 func tick():
 	#Every tick, add resources relative to the amount of producers.
-	recruits_literal += (recruits_per_second * auto_recruiters*recruit_mod)
+	recruits_literal += (recruits_per_second * auto_recruiters*recruit_mod) / TICK_MOD
 	recruits_rounded = int(ceil(recruits_literal))
 	
 	#Only do this if doing a recruit wont make the recruit resource go negative
-	var converted = (conversions_per_second * conversion_chambers* convert_mod)
+	var converted = (conversions_per_second * conversion_chambers* convert_mod) / TICK_MOD
 	if (recruits_literal-converted) >= 0:
-		drones_literal += converted
+		drones_literal += converted 
 		recruits_literal -= converted # Take out of recruit resource
 		drones_rounded = int(floor(drones_literal))
 		recruits_rounded = int(ceil(recruits_literal))
 	
 	#Resource production
-	materials += (resources_per_drone_per_second * assigned_drones_materials * materials_mod)
-	money += (resources_per_drone_per_second * assigned_drones_money * money_mod)
-	science += (resources_per_drone_per_second * assigned_drones_science * science_mod)
+	materials += (resources_per_drone_per_second * assigned_drones_materials * materials_mod) / TICK_MOD
+	money += (resources_per_drone_per_second * assigned_drones_money * money_mod) / TICK_MOD
+	science += (resources_per_drone_per_second * assigned_drones_science * science_mod) / TICK_MOD
 	
 	# Update the amount of availible drones
 	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
