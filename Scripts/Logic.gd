@@ -169,7 +169,7 @@ func parse_dict(dict):
 		science_mod = 1.00
 	
 func format_number(number):
-	var result
+	var result = "%.2f"
 	var label = ""
 	# First, determine if Nothing, K, M, B, or T label
 	var offset = 0
@@ -188,21 +188,18 @@ func format_number(number):
 		label = "K"
 		offset = 3
 	
-	#Then limit it to 4 digits
+	#Then limit it to 3 digits
 	var digits = (log(number) / log(10)) - offset
 	var final_number = number/pow(10,offset)
-	if digits >= 3: #1000
-		result = "%f"
+	if digits >= 2: #100
+		result = "%.0f"
 		result = result % stepify(final_number,1)
-	elif digits >= 2: #100.0
+	elif digits >= 1: #10.0 
 		result = "%.1f"
 		result = result % stepify(final_number,0.1)
-	elif digits >= 1: #10.00 
+	else: 			#1.00
 		result = "%.2f"
 		result = result % stepify(final_number,0.01)
-	else: 			#1.000
-		result = "%.3f"
-		result = result % stepify(final_number,0.001)
 	
 	#Apply label
 	result = result + label
@@ -216,34 +213,34 @@ func format_number_int(number):
 	var offset = 0
 	var logo = log(number) / log(10)
 	
-	if logo >= 12:
+	if logo >= 11.999:
 		label = "T"
 		offset = 12
-	elif logo >= 9:
+	elif logo >= 8.999:
 		label = "B"
 		offset = 9
-	elif logo >= 6:
+	elif logo >= 5.999:
 		label = "M"
 		offset = 6
-	elif logo >= 3:
+	elif logo >= 2.999:
 		label = "K"
 		offset = 3
 	
-	#Then limit it to 4 digits
+	#Then limit it to 3 digits
 	var digits = (log(number) / log(10)) - offset
 	var final_number = number/pow(10,offset)
-	if digits >= 3: #1000
+	if digits >= 3: #1000 -> 1.000K
+		result = "%.2f"
+		result = result % stepify(final_number,1)
+	elif digits >= 2 and offset != 0 : #100
 		result = "%f"
 		result = result % stepify(final_number,1)
-	elif digits >= 2 and offset != 0 : #100.0
+	elif digits >= 1 and offset != 0: #10.00
 		result = "%.1f"
 		result = result % stepify(final_number,0.1)
-	elif digits >= 1 and offset != 0: #10.00 
+	elif offset != 0: 			#1.00, avoid being float
 		result = "%.2f"
 		result = result % stepify(final_number,0.01)
-	elif offset != 0: 			#1.000, avoid being float
-		result = "%.3f"
-		result = result % stepify(final_number,0.001)
 	else:
 		result = str(number)
 	
