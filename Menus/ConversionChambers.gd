@@ -16,7 +16,7 @@ func _process(_delta):
 	var addable_dps = Logic.conversions_per_second*Logic.convert_mod
 	$Label.set_text("Drones per second: " + Logic.format_number(current_dps) + " (+" + str(addable_dps) + ") \n" +
 					"Conversion chambers: " + str(Logic.conversion_chambers) +" (+1)\n" +
-					"Cost: " + Logic.format_number(money_cost) + " money " + Logic.format_number(material_cost) +" materials")
+					"Cost: " + Logic.format_number(material_cost) +" materials " + Logic.format_number(money_cost) + " money ")
 
 func _buy_Chamber():
 	if Logic.materials >= material_cost and Logic.money >= money_cost:
