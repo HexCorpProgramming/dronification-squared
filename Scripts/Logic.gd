@@ -167,6 +167,8 @@ func parse_dict(dict):
 		science_mod = (pow(2, Logic.science_upgrades-1) * Logic.upgrade_boost)+1.00
 	else:
 		science_mod = 1.00
+		
+	get_tree().call_group("buildings", "update_cost")
 	
 func format_number(number):
 	var result = "%.2f"
