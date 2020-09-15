@@ -24,10 +24,10 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 62.0
-margin_right = 546.0
+margin_right = 484.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 480, 0 )
+size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer"]
 margin_left = 32.0
@@ -60,10 +60,11 @@ __meta__ = {
 }
 
 [node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 546.0
-margin_right = 1026.0
+margin_left = 484.0
+margin_right = 964.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 480, 0 )
+size_flags_horizontal = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
 margin_left = 32.0
@@ -97,14 +98,15 @@ __meta__ = {
 LogicNumber = "money"
 
 [node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1026.0
-margin_right = 1465.0
+margin_left = 964.0
+margin_right = 1442.0
 margin_bottom = 57.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/PanelContainer2"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 439.0
+margin_right = 478.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
@@ -133,14 +135,15 @@ __meta__ = {
 LogicNumber = "materials"
 
 [node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1465.0
-margin_right = 1858.0
+margin_left = 1442.0
+margin_right = 1920.0
 margin_bottom = 57.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/PanelContainer4"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 393.0
+margin_right = 478.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
