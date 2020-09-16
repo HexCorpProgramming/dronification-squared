@@ -55,9 +55,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 1102.74
+margin_left = 1072.48
 margin_top = 273.512
-margin_right = 1879.74
+margin_right = 1877.48
 margin_bottom = 1001.51
 custom_constants/separation = 85
 __meta__ = {
@@ -66,7 +66,7 @@ __meta__ = {
 }
 
 [node name="MaterialContainer" type="PanelContainer" parent="VBoxContainer"]
-margin_right = 805.0
+margin_right = 875.0
 margin_bottom = 186.0
 theme = ExtResource( 11 )
 __meta__ = {
@@ -76,10 +76,12 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 803.0
+margin_right = 873.0
 margin_bottom = 184.0
-size_flags_horizontal = 0
-custom_constants/separation = 0
+size_flags_horizontal = 3
+custom_constants/separation = 28
+alignment = 2
+script = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MaterialContainer/HBoxContainer"]
 margin_right = 547.0
@@ -94,26 +96,20 @@ margin_bottom = 81.0
 size_flags_vertical = 1
 text = "Material Acquisition"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer"]
 margin_top = 83.0
 margin_right = 547.0
 margin_bottom = 150.0
-custom_constants/separation = -25
-alignment = 1
-script = ExtResource( 6 )
-
-[node name="Label" type="Label" parent="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 547.0
-margin_bottom = 67.0
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 4 )
 text = "Materials per second: X.XXXX +(X.XXXX)
 Drones Assigned: x.xxxX"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MaterialContainer/HBoxContainer"]
-margin_left = 547.0
-margin_right = 801.0
+margin_left = 575.0
+margin_right = 871.0
 margin_bottom = 182.0
+size_flags_horizontal = 3
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
 columns = 2
@@ -140,11 +136,11 @@ margin_left = 130.0
 margin_top = 97.0
 margin_right = 254.0
 margin_bottom = 182.0
-text = " +1K  "
+text = " +1K "
 
 [node name="BuisnessContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 271.0
-margin_right = 805.0
+margin_right = 875.0
 margin_bottom = 457.0
 theme = ExtResource( 11 )
 __meta__ = {
@@ -154,12 +150,14 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 803.0
+margin_right = 873.0
 margin_bottom = 184.0
 custom_constants/separation = 0
+alignment = 2
+script = ExtResource( 7 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer"]
-margin_right = 547.0
+margin_right = 617.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 custom_constants/separation = 2
@@ -167,27 +165,24 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer"]
 margin_top = 32.0
-margin_right = 547.0
+margin_right = 617.0
 margin_bottom = 81.0
 text = "Business Integration"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer"]
 margin_top = 83.0
-margin_right = 547.0
+margin_right = 617.0
 margin_bottom = 150.0
-custom_constants/separation = -25
-script = ExtResource( 7 )
-
-[node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 392.0
-margin_bottom = 67.0
 custom_fonts/font = ExtResource( 4 )
 text = "Money per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer"]
-margin_left = 547.0
-margin_right = 801.0
+margin_left = 617.0
+margin_right = 871.0
 margin_bottom = 182.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
@@ -219,22 +214,23 @@ text = " +1K  "
 
 [node name="ScienceContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 542.0
-margin_right = 805.0
+margin_right = 875.0
 margin_bottom = 728.0
 theme = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 803.0
+margin_right = 873.0
 margin_bottom = 184.0
+grow_horizontal = 0
+grow_vertical = 0
 custom_constants/separation = 0
+alignment = 2
+script = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer"]
-margin_right = 547.0
+margin_right = 597.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 custom_constants/separation = 2
@@ -242,55 +238,49 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer"]
 margin_top = 32.0
-margin_right = 547.0
+margin_right = 597.0
 margin_bottom = 81.0
 text = "Experimentation"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer"]
 margin_top = 83.0
-margin_right = 547.0
+margin_right = 597.0
 margin_bottom = 150.0
-custom_constants/separation = -25
-script = ExtResource( 5 )
-
-[node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 407.0
-margin_bottom = 67.0
 custom_fonts/font = ExtResource( 4 )
 text = "Science per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer"]
-margin_left = 547.0
-margin_right = 801.0
+margin_left = 597.0
+margin_right = 871.0
 margin_bottom = 182.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
 columns = 2
 
 [node name="AssignScience" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
-margin_right = 118.0
+margin_right = 128.0
 margin_bottom = 85.0
-text = "+1"
+text = "  +1  "
 
 [node name="AssignScience2" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
-margin_left = 130.0
-margin_right = 254.0
+margin_left = 140.0
+margin_right = 274.0
 margin_bottom = 85.0
-text = " +10  "
+text = "  +10  "
 
 [node name="AssignScience3" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
 margin_top = 97.0
-margin_right = 118.0
+margin_right = 128.0
 margin_bottom = 182.0
-text = "+100"
+text = " +100"
 
 [node name="AssignScience4" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
-margin_left = 130.0
+margin_left = 140.0
 margin_top = 97.0
-margin_right = 254.0
+margin_right = 274.0
 margin_bottom = 182.0
-text = " +1K  "
+text = " +1K "
 
 [node name="Label" type="Label" parent="."]
 margin_left = 461.48
@@ -298,7 +288,8 @@ margin_top = 252.155
 margin_right = 1072.48
 margin_bottom = 433.155
 custom_fonts/font = ExtResource( 2 )
-text = "Drones Available: X.XXXX"
+text = "Drones Available:
+ X.XXXX"
 align = 1
 autowrap = true
 script = ExtResource( 8 )
@@ -306,15 +297,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Back" to="." method="_on_back"]
-[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials" to="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
-[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials2" to="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
-[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials3" to="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
-[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials4" to="VBoxContainer/MaterialContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]
-[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness" to="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
-[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness2" to="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
-[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness3" to="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
-[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness4" to="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]
-[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience" to="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
-[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience2" to="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
-[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience3" to="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
-[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience4" to="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]
+[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials" to="VBoxContainer/MaterialContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials2" to="VBoxContainer/MaterialContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
+[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials3" to="VBoxContainer/MaterialContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
+[connection signal="pressed" from="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer/AssignMaterials4" to="VBoxContainer/MaterialContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]
+[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness" to="VBoxContainer/BuisnessContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness2" to="VBoxContainer/BuisnessContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
+[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness3" to="VBoxContainer/BuisnessContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
+[connection signal="pressed" from="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer/AssignBuisness4" to="VBoxContainer/BuisnessContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]
+[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience" to="VBoxContainer/ScienceContainer/HBoxContainer" method="_assign" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience2" to="VBoxContainer/ScienceContainer/HBoxContainer" method="_assign" binds= [ 10 ]]
+[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience3" to="VBoxContainer/ScienceContainer/HBoxContainer" method="_assign" binds= [ 100 ]]
+[connection signal="pressed" from="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer/AssignScience4" to="VBoxContainer/ScienceContainer/HBoxContainer" method="_assign" binds= [ 1000 ]]

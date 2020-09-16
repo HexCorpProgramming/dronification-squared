@@ -48,6 +48,11 @@ var recruits_per_second = 0.25
 var resources_per_drone_per_second = 0.25
 var conversions_per_second = 0.25
 
+#Values to be taken and displayed
+var drones_per_second = 0.00
+var multi = 1
+
+
 #Timer
 onready var timer = get_node("Timer")
 
@@ -96,6 +101,11 @@ func tick():
 	# Update the amount of availible drones
 	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
 	
+	#Updated the stored drones_per_second and assignment multipliers
+	drones_per_second = conversion_chambers * conversions_per_second* convert_mod
+	if multi * 1000 < drones_per_second:
+		multi *= 1000
+		
 func add_recruits(amnt):
 	recruits_literal += amnt
 	recruits_rounded = int(ceil(recruits_literal))
