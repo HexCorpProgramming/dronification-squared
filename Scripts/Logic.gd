@@ -228,16 +228,16 @@ func format_number_int(number):
 	var offset = 0
 	var logo = log(number) / log(10)
 	
-	if logo >= 12:
+	if logo >= 11.99:
 		label = "T"
 		offset = 12
-	elif logo >= 9:
+	elif logo >= 8.99:
 		label = "B"
 		offset = 9
-	elif logo >= 6:
+	elif logo >= 5.99:
 		label = "M"
 		offset = 6
-	elif logo >= 3:
+	elif logo >= 2.99:
 		label = "K"
 		offset = 3
 	
@@ -252,7 +252,7 @@ func format_number_int(number):
 		result = result % stepify(final_number,0.1)
 	elif digits >= 1 and offset != 0: #10.00
 		result = "%.2f"
-		result = result % stepify(final_number,00.1)
+		result = result % stepify(final_number,0.01)
 	elif offset != 0: 			#1.000, avoid being float
 		result = "%.3f"
 		result = result % stepify(final_number,0.001)

@@ -12,8 +12,8 @@ func _ready():
 
 func _process(_delta):
 	update_text()
-	var current_sps = Logic.assigned_drones_materials * Logic.resources_per_drone_per_second * Logic.science_mod
-	var addable_sps = Logic.resources_per_drone_per_second * Logic.money_mod
+	var current_sps = Logic.assigned_drones_materials * Logic.resources_per_drone_per_second * Logic.materials_mod
+	var addable_sps = Logic.resources_per_drone_per_second * Logic.materials_mod
 	label.set_text("Money per second: " + Logic.format_number(current_sps) + "  +(" + str(addable_sps) + ")\n"
 			+ "Drones Assigned: " + Logic.format_number_int(Logic.assigned_drones_materials))
 
