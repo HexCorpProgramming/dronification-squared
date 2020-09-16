@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Menus/Research/Researchers/MiningResearch.gd" type="Script" id=9]
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menus/Fonts/MiniUIFont.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Assets/Research Pod.png" type="Texture" id=12]
 
 [node name="Research" type="Control"]
 anchor_right = 1.0
@@ -20,6 +21,15 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Research Pod" type="Sprite" parent="."]
+modulate = Color( 0.317647, 0.317647, 0.317647, 1 )
+position = Vector2( 964.229, 669.811 )
+scale = Vector2( 0.134091, 0.134091 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( 1980, 0, 15840, 6600 )
+region_filter_clip = true
 
 [node name="Back" parent="." instance=ExtResource( 10 )]
 

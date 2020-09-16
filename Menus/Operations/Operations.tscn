@@ -66,7 +66,7 @@ __meta__ = {
 }
 
 [node name="MaterialContainer" type="PanelContainer" parent="VBoxContainer"]
-margin_right = 875.0
+margin_right = 833.0
 margin_bottom = 186.0
 theme = ExtResource( 11 )
 __meta__ = {
@@ -76,7 +76,7 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 873.0
+margin_right = 831.0
 margin_bottom = 184.0
 size_flags_horizontal = 3
 custom_constants/separation = 28
@@ -107,7 +107,7 @@ Drones Assigned: x.xxxX"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MaterialContainer/HBoxContainer"]
 margin_left = 575.0
-margin_right = 871.0
+margin_right = 829.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 custom_constants/vseparation = 12
@@ -140,7 +140,7 @@ text = " +1K "
 
 [node name="BuisnessContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 271.0
-margin_right = 875.0
+margin_right = 833.0
 margin_bottom = 457.0
 theme = ExtResource( 11 )
 __meta__ = {
@@ -150,14 +150,14 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 873.0
+margin_right = 831.0
 margin_bottom = 184.0
 custom_constants/separation = 0
 alignment = 2
 script = ExtResource( 7 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer"]
-margin_right = 617.0
+margin_right = 575.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 custom_constants/separation = 2
@@ -165,13 +165,13 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer"]
 margin_top = 32.0
-margin_right = 617.0
+margin_right = 575.0
 margin_bottom = 81.0
 text = "Business Integration"
 
 [node name="Label2" type="Label" parent="VBoxContainer/BuisnessContainer/HBoxContainer/VBoxContainer"]
 margin_top = 83.0
-margin_right = 617.0
+margin_right = 575.0
 margin_bottom = 150.0
 custom_fonts/font = ExtResource( 4 )
 text = "Money per second: xxx +(xx)
@@ -181,8 +181,8 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer"]
-margin_left = 617.0
-margin_right = 871.0
+margin_left = 575.0
+margin_right = 829.0
 margin_bottom = 182.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
@@ -214,14 +214,14 @@ text = " +1K  "
 
 [node name="ScienceContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 542.0
-margin_right = 875.0
+margin_right = 833.0
 margin_bottom = 728.0
 theme = ExtResource( 11 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer"]
 margin_left = 2.0
 margin_top = 2.0
-margin_right = 873.0
+margin_right = 831.0
 margin_bottom = 184.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -230,7 +230,7 @@ alignment = 2
 script = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer"]
-margin_right = 597.0
+margin_right = 555.0
 margin_bottom = 182.0
 size_flags_horizontal = 3
 custom_constants/separation = 2
@@ -238,21 +238,21 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer"]
 margin_top = 32.0
-margin_right = 597.0
+margin_right = 555.0
 margin_bottom = 81.0
 text = "Experimentation"
 
 [node name="Label2" type="Label" parent="VBoxContainer/ScienceContainer/HBoxContainer/VBoxContainer"]
 margin_top = 83.0
-margin_right = 597.0
+margin_right = 555.0
 margin_bottom = 150.0
 custom_fonts/font = ExtResource( 4 )
 text = "Science per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer"]
-margin_left = 597.0
-margin_right = 871.0
+margin_left = 555.0
+margin_right = 829.0
 margin_bottom = 182.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
