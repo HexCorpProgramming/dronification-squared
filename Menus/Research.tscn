@@ -49,12 +49,13 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 636.384
+margin_left = 591.936
 margin_top = 340.811
-margin_right = 1842.0
-margin_bottom = -122.0
+margin_right = 1799.94
+margin_bottom = 887.811
 custom_constants/separation = 72
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 

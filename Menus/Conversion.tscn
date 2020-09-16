@@ -52,12 +52,13 @@ __meta__ = {
 }
 
 [node name="ConversionChambersContainer" type="PanelContainer" parent="."]
-margin_left = 940.266
-margin_top = 510.225
-margin_right = 1786.27
-margin_bottom = 966.026
+margin_left = 859.724
+margin_top = 512.225
+margin_right = 1705.72
+margin_bottom = 968.026
 theme = ExtResource( 4 )
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -76,7 +77,9 @@ size_flags_horizontal = 0
 custom_fonts/font = ExtResource( 3 )
 text = "Conversion Chambers"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ConversionChambersContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ConversionChambersContainer/VBoxContainer" groups=[
+"buildings",
+]]
 margin_top = 220.0
 margin_right = 842.0
 margin_bottom = 373.0

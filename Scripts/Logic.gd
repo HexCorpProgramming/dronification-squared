@@ -190,18 +190,21 @@ func format_number(number):
 		label = "K"
 		offset = 3
 	
-	#Then limit it to 3 digits
+	#Then limit it to 4 digits
 	var digits = (log(number) / log(10)) - offset
 	var final_number = number/pow(10,offset)
-	if digits >= 2: #100
-		result = "%.0f"
+	if digits >= 3: #1000
+		result = "%f"
 		result = result % stepify(final_number,1)
-	elif digits >= 1: #10.0 
+	if digits >= 2: #100
 		result = "%.1f"
 		result = result % stepify(final_number,0.1)
-	else: 			#1.00
+	elif digits >= 1: #10.0 
 		result = "%.2f"
 		result = result % stepify(final_number,0.01)
+	else: 			#1.00
+		result = "%.3f"
+		result = result % stepify(final_number,0.001)
 	
 	#Apply label
 	result = result + label
@@ -215,34 +218,34 @@ func format_number_int(number):
 	var offset = 0
 	var logo = log(number) / log(10)
 	
-	if logo >= 11.999:
+	if logo >= 12:
 		label = "T"
 		offset = 12
-	elif logo >= 8.999:
+	elif logo >= 9:
 		label = "B"
 		offset = 9
-	elif logo >= 5.999:
+	elif logo >= 6:
 		label = "M"
 		offset = 6
-	elif logo >= 2.999:
+	elif logo >= 3:
 		label = "K"
 		offset = 3
 	
-	#Then limit it to 3 digits
+	#Then limit it to 4 digits
 	var digits = (log(number) / log(10)) - offset
 	var final_number = number/pow(10,offset)
-	if digits >= 3: #1000 -> 1.000K
-		result = "%.2f"
-		result = result % stepify(final_number,1)
-	elif digits >= 2 and offset != 0 : #100
+	if digits >= 3: #1000
 		result = "%f"
 		result = result % stepify(final_number,1)
-	elif digits >= 1 and offset != 0: #10.00
+	elif digits >= 2 and offset != 0 : #100.0
 		result = "%.1f"
 		result = result % stepify(final_number,0.1)
-	elif offset != 0: 			#1.00, avoid being float
+	elif digits >= 1 and offset != 0: #10.00
 		result = "%.2f"
-		result = result % stepify(final_number,0.01)
+		result = result % stepify(final_number,00.1)
+	elif offset != 0: 			#1.000, avoid being float
+		result = "%.3f"
+		result = result % stepify(final_number,0.001)
 	else:
 		result = str(number)
 	
