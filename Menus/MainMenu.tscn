@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Hive Mxtress.png" type="Texture" id=3]
 [ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Menus/DroneCount.gd" type="Script" id=5]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/SaveButtons.gd" type="Script" id=7]
 
 [sub_resource type="Theme" id=1]
@@ -27,6 +28,11 @@ __meta__ = {
 position = Vector2( 654.612, 1177.52 )
 scale = Vector2( 0.344893, 0.344893 )
 texture = ExtResource( 3 )
+
+[node name="Back" parent="." instance=ExtResource( 6 )]
+margin_top = 929.807
+margin_right = 926.0
+margin_bottom = 1702.81
 
 [node name="DronesDisplay" type="Panel" parent="."]
 margin_left = 814.549
@@ -135,6 +141,7 @@ text = "Load"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Back" to="." method="_on_start"]
 [connection signal="pressed" from="VBoxContainer/RecruitmentButton" to="." method="_on_recruitment"]
 [connection signal="pressed" from="VBoxContainer/ConversionButton" to="." method="_on_conversion"]
 [connection signal="pressed" from="VBoxContainer/OperationsButton" to="." method="_on_operations"]

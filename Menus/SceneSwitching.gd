@@ -26,6 +26,16 @@ func _on_menu():
 	get_node("/root/Root/MainMenu").visible = true
 	get_node("/root/Root/Header").visible = true
 
+func _on_credits():
+	visible = false
+	get_node("/root/Root/Credits").visible = true
+	
+func _on_start():
+	visible = false
+	get_node("/root/Root/Header").visible = false
+	get_node("/root/Root/Start").visible = true
+
 func _on_back():
 	visible = false
 	get_node("/root/Root/MainMenu").visible = true
+
