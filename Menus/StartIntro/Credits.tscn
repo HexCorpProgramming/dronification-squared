@@ -70,27 +70,27 @@ bbcode_text = "[center]
 Start Screen and Intro 
 [color=#ff66ff][i]Drone #1211[/i][/color]
 
-Initial logic system
-[color=#ff66ff][i]Drone #5890[/i][/color]
-
 Concept Art
 [color=#ff66ff][i]Drone #5845[/i][/color]
 
+\"That one drone with a Mac\"
+[color=#ff66ff][i]Drone #0825[/i][/color]
+
 Character Art
-[color=#ff66ff][i]_______________[/i][/color]
+[color=#ff66ff][i]@sleepystephbot[/i][/color]
 [/center]"
 text = "
 Start Screen and Intro 
 Drone #1211
 
-Initial logic system
-Drone #5890
-
 Concept Art
 Drone #5845
 
+\"That one drone with a Mac\"
+Drone #0825
+
 Character Art
-_______________
+@sleepystephbot
 "
 
 [node name="Back" parent="." instance=ExtResource( 2 )]
