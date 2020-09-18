@@ -14,7 +14,7 @@ func update_cost():
 func _process(_delta):
 	var current_rps = Logic.auto_recruiters * Logic.recruits_per_second* Logic.recruit_mod
 	var addable_rps = Logic.recruits_per_second*Logic.recruit_mod
-	$Label.set_text("Recruits per second: " + Logic.format_number(current_rps) + " (+" + str(addable_rps) + ") \n" +
+	$Label.set_text("Recruits per second: " + Logic.format_number(current_rps) + " (+" + Logic.format_number(addable_rps) + ") \n" +
 					"Auto-recruiters: " + str(Logic.auto_recruiters) +" (+1)\n" +
 					"Cost: " + Logic.format_number(material_cost) +" materials " + Logic.format_number(money_cost) + " money ")
 
