@@ -65,7 +65,9 @@ custom_fonts/font = ExtResource( 4 )
 text = "Drones:"
 align = 1
 
-[node name="DroneCount" type="Label" parent="DronesDisplay/VBoxContainer"]
+[node name="DroneCount" type="Label" parent="DronesDisplay/VBoxContainer" groups=[
+"tickable",
+]]
 margin_top = 99.0
 margin_right = 580.0
 margin_bottom = 178.0

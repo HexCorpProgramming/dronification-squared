@@ -52,7 +52,9 @@ margin_right = 402.0
 margin_bottom = 49.0
 rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer/Control"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer/Control" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -95,7 +97,9 @@ margin_right = 427.0
 margin_bottom = 49.0
 rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3/Control3"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3/Control3" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -140,7 +144,9 @@ margin_bottom = 49.0
 rect_min_size = Vector2( 220, 49 )
 size_flags_horizontal = 3
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2/Control2"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2/Control2" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -184,7 +190,9 @@ margin_right = 381.0
 margin_bottom = 49.0
 rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4/Control4"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4/Control4" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283

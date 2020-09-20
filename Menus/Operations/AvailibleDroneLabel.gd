@@ -1,4 +1,4 @@
 extends Label
 
-func _process(_delta):
+func tick():
 	set_text("Drones Available: \n" + Logic.format_number_int(Logic.available_drones))

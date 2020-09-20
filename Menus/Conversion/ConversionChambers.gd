@@ -5,13 +5,13 @@ var money_cost
 
 func _ready():
 	update_cost()
+	update_display()
 
 func update_cost():
 	material_cost = pow(2,Logic.conversion_chambers-1) * Logic.CONVERTER_BASE_MATERIAL # Cost doubles with each purchase
 	money_cost = pow(2,(Logic.conversion_chambers-1)) * Logic.CONVERTER_BASE_MONEY # -1 to account for the free one
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func update_display():
 	var current_dps = Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod
 	var addable_dps = Logic.conversions_per_second*Logic.convert_mod
 	$Label.set_text("Drones per second: " + Logic.format_number(current_dps) + " (+" + Logic.format_number(addable_dps) + ") \n" +
@@ -24,3 +24,4 @@ func _buy_Chamber():
 		Logic.money -= money_cost
 		Logic.conversion_chambers += 1
 		update_cost()
+		update_display()

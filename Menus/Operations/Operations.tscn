@@ -73,7 +73,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer" groups=[
+"display",
+"materials",
+"operations",
+]]
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 831.0
@@ -159,7 +163,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer" groups=[
+"display",
+"money",
+"operations",
+]]
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 831.0
@@ -242,7 +250,11 @@ margin_right = 833.0
 margin_bottom = 728.0
 theme = ExtResource( 11 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer" groups=[
+"display",
+"operations",
+"science",
+]]
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 831.0
@@ -318,7 +330,9 @@ mouse_default_cursor_shape = 2
 enabled_focus_mode = 0
 text = " +1K "
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." groups=[
+"tickable",
+]]
 margin_left = 461.48
 margin_top = 252.155
 margin_right = 1072.48

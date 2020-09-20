@@ -1,0 +1,20 @@
+
+display - update_display() (called on ready, and whenever loading)
+tickable - tick() (called every tick)
+
+buildings - update_cost() (called on loading)
+
+--Recruitment--
+auto-recruiter - update_display() (called by upgrade)
+
+--Conversion-- 
+converter - update_display() (called by upgrade)
+
+--Operations--
+operations = update_text() (called on loading)
+materials - update_display() (called by upgrade)
+money - update_display() (called by upgrade)
+science - update_display() (called by upgrade)
+
+--Research--
+upgrade - researches (unused for now)

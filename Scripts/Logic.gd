@@ -75,6 +75,8 @@ func _ready():
 	timer.set_wait_time(1.0/TICK_MOD)
 	timer.connect("timeout",self,"tick")
 	timer.start(1.0/TICK_MOD)
+	
+	get_tree().call_group("display", "update_display")
 
 
 
@@ -105,6 +107,9 @@ func tick():
 	drones_per_second = conversion_chambers * conversions_per_second* convert_mod
 	if multi * 1000 < drones_per_second:
 		multi *= 1000
+		
+	#update on-tick displays
+	get_tree().call_group("tickable", "tick")
 		
 func add_recruits(amnt):
 	recruits_literal += amnt
@@ -177,8 +182,11 @@ func parse_dict(dict):
 		science_mod = (pow(2, Logic.science_upgrades-1) * Logic.upgrade_boost)+1.00
 	else:
 		science_mod = 1.00
-		
+	
+	tick()
 	get_tree().call_group("buildings", "update_cost")
+	get_tree().call_group("display", "update_display")
+	get_tree().call_group("operations", "update_text")
 	
 func format_number(number):
 	var result = "%.2f"

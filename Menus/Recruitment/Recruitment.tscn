@@ -124,7 +124,9 @@ custom_fonts/font = ExtResource( 2 )
 text = "Auto-Recruiters"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AutoRecruitersContainer/VBoxContainer" groups=[
+"auto-recruiter",
 "buildings",
+"display",
 ]]
 margin_top = 143.0
 margin_right = 864.0

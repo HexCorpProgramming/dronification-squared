@@ -7,7 +7,11 @@ onready var assign10 = get_node("GridContainer/AssignScience2")
 onready var assign100 = get_node("GridContainer/AssignScience3")
 onready var assign1K = get_node("GridContainer/AssignScience4")
 
-func _process(_delta):
+func _ready():
+	update_text()
+	update_display()
+
+func update_display():
 	update_text()
 	var current_sps = Logic.assigned_drones_science * Logic.resources_per_drone_per_second * Logic.science_mod
 	var addable_sps = Logic.resources_per_drone_per_second * Logic.science_mod
@@ -18,6 +22,7 @@ func _assign(amount):
 	if Logic.available_drones >= amount * Logic.multi:
 		Logic.assigned_drones_science += amount * Logic.multi
 		Logic.available_drones -= amount * Logic.multi
+		update_display()
 
 func update_text():
 	if Logic.multi == 1: #5 chars per button

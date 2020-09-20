@@ -22,14 +22,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Research Pod" type="Sprite" parent="."]
+[node name="Research PodBG" type="Sprite" parent="."]
 modulate = Color( 0.317647, 0.317647, 0.317647, 1 )
-position = Vector2( 964.229, 669.811 )
+position = Vector2( 1058.69, 669.811 )
 scale = Vector2( 0.134091, 0.134091 )
 texture = ExtResource( 12 )
 region_enabled = true
-region_rect = Rect2( 1980, 0, 15840, 6600 )
+region_rect = Rect2( 3500, 0, 15840, 6600 )
 region_filter_clip = true
+
+[node name="Research Pod" type="Sprite" parent="."]
+position = Vector2( 323.625, 669.811 )
+scale = Vector2( 0.134, 0.134 )
+texture = ExtResource( 12 )
 
 [node name="Back" parent="." instance=ExtResource( 10 )]
 
@@ -94,7 +99,10 @@ margin_right = 564.0
 margin_bottom = 49.0
 text = "PR Development"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
 margin_top = 44.0
 margin_right = 564.0
 margin_bottom = 129.0
@@ -140,7 +148,10 @@ margin_right = 564.0
 margin_bottom = 49.0
 text = "Mind Control Technology"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
 margin_top = 49.0
 margin_right = 564.0
 margin_bottom = 134.0
@@ -191,7 +202,10 @@ margin_right = 564.0
 margin_bottom = 49.0
 text = "Mining Apparatus"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
 margin_top = 44.0
 margin_right = 564.0
 margin_bottom = 129.0
@@ -235,7 +249,10 @@ margin_right = 564.0
 margin_bottom = 49.0
 text = "Clerical Software"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
 margin_top = 44.0
 margin_right = 564.0
 margin_bottom = 129.0
@@ -281,7 +298,10 @@ margin_right = 564.0
 margin_bottom = 49.0
 text = "Drone Testing Chemicals"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
 margin_top = 44.0
 margin_right = 564.0
 margin_bottom = 129.0

@@ -9,8 +9,9 @@ onready var assign1K = get_node("GridContainer/AssignMaterials4")
 
 func _ready():
 	update_text()
+	update_display()
 
-func _process(_delta):
+func update_display():
 	update_text()
 	var current_sps = Logic.assigned_drones_materials * Logic.resources_per_drone_per_second * Logic.materials_mod
 	var addable_sps = Logic.resources_per_drone_per_second * Logic.materials_mod
@@ -21,6 +22,7 @@ func _assign(amount):
 	if Logic.available_drones >= amount * Logic.multi:
 		Logic.assigned_drones_materials += amount * Logic.multi
 		Logic.available_drones -= amount * Logic.multi
+		update_display()
 
 func update_text():
 	if Logic.multi == 1: #5 chars per button

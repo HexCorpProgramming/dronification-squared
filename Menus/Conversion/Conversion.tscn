@@ -79,6 +79,8 @@ text = "Conversion Chambers"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ConversionChambersContainer/VBoxContainer" groups=[
 "buildings",
+"converter",
+"display",
 ]]
 margin_top = 220.0
 margin_right = 842.0
