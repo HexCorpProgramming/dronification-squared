@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Logic="*res://Objects/Logic.tscn"
 Global="*res://Scripts/Global.gd"
+Audio="*res://Objects/Audio.tscn"
 
 [display]
 
