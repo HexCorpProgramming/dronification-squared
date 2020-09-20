@@ -49,14 +49,15 @@ func clean_id(id):
 	if id.is_valid_integer(): #or id.is_valid_hex_number(): #if numbers or valid hex is put in, accept it
 		return id.substr(0,4).pad_zeros(4)
 	else: #Else, see if we cant squeeze out a number from the input?
-		id = int(id)
-		if id == 0: # if no dice, time to generate
-			return generate_id()
+		var testid = int(id)
+		if testid == 0: # if no dice, time to generate
+			return generate_id(hash(id))
 		else:
-			return id
+			return testid
 
-func generate_id():
+func generate_id(rngseed):
 	var rng = RandomNumberGenerator.new()
+	rng.seed = rngseed
 	var id = rng.randi_range(0,9999)
 	return String(id).pad_zeros(4)
 	
