@@ -97,7 +97,10 @@ Cost: xx money xx materials"
 margin_left = 545.0
 margin_right = 842.0
 margin_bottom = 153.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
 custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "    BUY    "
 [connection signal="pressed" from="Back" to="." method="_on_back"]
 [connection signal="pressed" from="ConversionChambersContainer/VBoxContainer/HBoxContainer/BuyChambersButton" to="ConversionChambersContainer/VBoxContainer/HBoxContainer" method="_buy_Chamber"]

@@ -117,18 +117,27 @@ columns = 2
 [node name="AssignMaterials" type="Button" parent="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer"]
 margin_right = 118.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "+1"
 
 [node name="AssignMaterials2" type="Button" parent="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer"]
 margin_left = 130.0
 margin_right = 254.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +10  "
 
 [node name="AssignMaterials3" type="Button" parent="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer"]
 margin_top = 97.0
 margin_right = 118.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "+100"
 
 [node name="AssignMaterials4" type="Button" parent="VBoxContainer/MaterialContainer/HBoxContainer/GridContainer"]
@@ -136,6 +145,9 @@ margin_left = 130.0
 margin_top = 97.0
 margin_right = 254.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +1K "
 
 [node name="BuisnessContainer" type="PanelContainer" parent="VBoxContainer"]
@@ -191,18 +203,27 @@ columns = 2
 [node name="AssignBuisness" type="Button" parent="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer"]
 margin_right = 118.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +1 "
 
 [node name="AssignBuisness2" type="Button" parent="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer"]
 margin_left = 130.0
 margin_right = 254.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +10  "
 
 [node name="AssignBuisness3" type="Button" parent="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer"]
 margin_top = 97.0
 margin_right = 118.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "+100"
 
 [node name="AssignBuisness4" type="Button" parent="VBoxContainer/BuisnessContainer/HBoxContainer/GridContainer"]
@@ -210,6 +231,9 @@ margin_left = 130.0
 margin_top = 97.0
 margin_right = 254.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +1K  "
 
 [node name="ScienceContainer" type="PanelContainer" parent="VBoxContainer"]
@@ -261,18 +285,27 @@ columns = 2
 [node name="AssignScience" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
 margin_right = 128.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "  +1  "
 
 [node name="AssignScience2" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
 margin_left = 140.0
 margin_right = 274.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "  +10  "
 
 [node name="AssignScience3" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
 margin_top = 97.0
 margin_right = 128.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +100"
 
 [node name="AssignScience4" type="Button" parent="VBoxContainer/ScienceContainer/HBoxContainer/GridContainer"]
@@ -280,6 +313,9 @@ margin_left = 140.0
 margin_top = 97.0
 margin_right = 274.0
 margin_bottom = 182.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = " +1K "
 
 [node name="Label" type="Label" parent="."]

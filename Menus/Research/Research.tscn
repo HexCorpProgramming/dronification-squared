@@ -112,6 +112,9 @@ Science to Upgrade: xxx"
 margin_left = 347.0
 margin_right = 564.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "UPGRADE"
 
 [node name="MindControlContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
@@ -155,6 +158,9 @@ Science to Upgrade: xxx"
 margin_left = 347.0
 margin_right = 564.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "UPGRADE"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
@@ -203,6 +209,9 @@ Science to Upgrade: xxx"
 margin_left = 347.0
 margin_right = 564.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "UPGRADE"
 
 [node name="ClericalContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer2"]
@@ -244,6 +253,9 @@ Science to Upgrade: xxx"
 margin_left = 347.0
 margin_right = 564.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "UPGRADE"
 
 [node name="DroneTestingContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer2"]
@@ -287,6 +299,9 @@ Science to Upgrade: xxx"
 margin_left = 347.0
 margin_right = 564.0
 margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
 text = "UPGRADE"
 [connection signal="pressed" from="Back" to="." method="_on_back"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]
