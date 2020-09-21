@@ -13,3 +13,4 @@ func _buy_Research():
 		Logic.science_upgrades += 1
 		Logic.science_mod = (pow(2, Logic.science_upgrades-1) * Logic.upgrade_boost)+1.00
 		get_tree().call_group("science","update_display")
+		update_display()
