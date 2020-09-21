@@ -24,10 +24,11 @@ __meta__ = {
 }
 
 [node name="Hex Employee" type="TextureButton" parent="."]
-anchor_right = 0.178
-anchor_bottom = 0.154
-margin_right = 444.24
-margin_bottom = 1562.94
+anchor_right = 0.397
+anchor_bottom = 1.553
+margin_right = -10.24
+margin_bottom = -22.6428
+rect_min_size = Vector2( 752, 1654 )
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 1 )
 texture_click_mask = ExtResource( 10 )

@@ -35,6 +35,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Control" type="Control" parent="Label"]
+anchor_left = 0.658
+anchor_right = 1.0
+anchor_bottom = 0.037
+margin_right = -3.8147e-06
+margin_bottom = -0.292999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Label/Control"]
+color = Color( 0.627451, 0.2, 0.627451, 1 )
+polygon = PoolVector2Array( 0, 0, 100, 0, 0, -50 )
+
 [node name="Disappear" type="Timer" parent="."]
 wait_time = 10.0
 
