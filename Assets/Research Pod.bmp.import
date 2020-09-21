@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/Research Pod.bmp-9d7158680b71c10ebf70d21d9d653347.res"
+
+[deps]
+
+source_file="res://Assets/Research Pod.bmp"
+dest_files=[ "res://.import/Research Pod.bmp-9d7158680b71c10ebf70d21d9d653347.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

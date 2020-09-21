@@ -1,0 +1,351 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Menus/Research/Researchers/PRDevelResearch.gd" type="Script" id=4]
+[ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=5]
+[ext_resource path="res://Menus/Research/Researchers/MindControlResearch.gd" type="Script" id=6]
+[ext_resource path="res://Menus/Research/Researchers/ClericalResearch.gd" type="Script" id=7]
+[ext_resource path="res://Menus/Research/Researchers/DroneTestingResearch.gd" type="Script" id=8]
+[ext_resource path="res://Menus/Research/Researchers/MiningResearch.gd" type="Script" id=9]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Menus/Fonts/MiniUIFont.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Assets/Research Pod.png" type="Texture" id=12]
+[ext_resource path="res://Menus/Character.gd" type="Script" id=13]
+
+[node name="Research" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Research PodBG" type="Sprite" parent="."]
+modulate = Color( 0.317647, 0.317647, 0.317647, 1 )
+position = Vector2( 1058.69, 669.811 )
+scale = Vector2( 0.134091, 0.134091 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( 3500, 0, 15840, 6600 )
+region_filter_clip = true
+
+[node name="Research Pod" type="TextureButton" parent="."]
+margin_left = 58.4009
+margin_top = 226.725
+margin_right = 589.041
+margin_bottom = 1111.13
+texture_normal = ExtResource( 12 )
+expand = true
+script = ExtResource( 13 )
+text = [ "Drone stored. Status: Optimal.", "Drone stored. Resistance: Negligible." ]
+
+[node name="TextBoxHolder" type="Control" parent="Research Pod"]
+anchor_left = 0.334
+anchor_top = 0.064
+anchor_right = 0.661
+anchor_bottom = 0.088
+margin_left = -126.234
+margin_top = 620.398
+margin_right = 126.247
+margin_bottom = 620.173
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" parent="." instance=ExtResource( 10 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 928.31
+margin_top = 50.7253
+margin_right = 1883.31
+margin_bottom = 226.725
+custom_fonts/font = ExtResource( 3 )
+text = "RESEARCH"
+align = 2
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 692.021
+margin_top = 199.0
+margin_right = 1880.02
+margin_bottom = 311.0
+text = "Science domination and test subject containment facility"
+align = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 591.936
+margin_top = 340.811
+margin_right = 1799.94
+margin_bottom = 887.811
+custom_constants/separation = 72
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 568.0
+margin_bottom = 547.0
+custom_constants/separation = 74
+
+[node name="PRDevelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 568.0
+margin_bottom = 133.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PRDevelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 131.0
+custom_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer"]
+margin_right = 564.0
+margin_bottom = 49.0
+text = "PR Development"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
+margin_top = 44.0
+margin_right = 564.0
+margin_bottom = 129.0
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 343.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 11 )
+text = "Current Modifier: +00%
+Science to Upgrade: xxx"
+
+[node name="BuyResearch" type="Button" parent="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 347.0
+margin_right = 564.0
+margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "UPGRADE"
+
+[node name="MindControlContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 207.0
+margin_right = 568.0
+margin_bottom = 345.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MindControlContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 136.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer"]
+margin_right = 564.0
+margin_bottom = 49.0
+text = "Mind Control Technology"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
+margin_top = 49.0
+margin_right = 564.0
+margin_bottom = 134.0
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 343.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 11 )
+text = "Current Modifier: +00%
+Science to Upgrade: xxx"
+
+[node name="BuyResearch" type="Button" parent="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer/HBoxContainer"]
+margin_left = 347.0
+margin_right = 564.0
+margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "UPGRADE"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 640.0
+margin_right = 1208.0
+margin_bottom = 547.0
+custom_constants/separation = 74
+
+[node name="MiningContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 568.0
+margin_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2/MiningContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 131.0
+custom_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer"]
+margin_right = 564.0
+margin_bottom = 49.0
+text = "Mining Apparatus"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
+margin_top = 44.0
+margin_right = 564.0
+margin_bottom = 129.0
+script = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 343.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 11 )
+text = "Current Modifier: +00%
+Science to Upgrade: xxx"
+
+[node name="BuyResearch" type="Button" parent="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer/HBoxContainer"]
+margin_left = 347.0
+margin_right = 564.0
+margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "UPGRADE"
+
+[node name="ClericalContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 207.0
+margin_right = 568.0
+margin_bottom = 340.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2/ClericalContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 131.0
+custom_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer"]
+margin_right = 564.0
+margin_bottom = 49.0
+text = "Clerical Software"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
+margin_top = 44.0
+margin_right = 564.0
+margin_bottom = 129.0
+script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 343.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 11 )
+text = "Current Modifier: +00%
+Science to Upgrade: xxx"
+
+[node name="BuyResearch" type="Button" parent="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer/HBoxContainer"]
+margin_left = 347.0
+margin_right = 564.0
+margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "UPGRADE"
+
+[node name="DroneTestingContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 414.0
+margin_right = 568.0
+margin_bottom = 547.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 131.0
+custom_constants/separation = -5
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer"]
+margin_right = 564.0
+margin_bottom = 49.0
+text = "Drone Testing Chemicals"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer" groups=[
+"display",
+"upgrade",
+]]
+margin_top = 44.0
+margin_right = 564.0
+margin_bottom = 129.0
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer/HBoxContainer"]
+margin_top = 9.0
+margin_right = 343.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 11 )
+text = "Current Modifier: +00%
+Science to Upgrade: xxx"
+
+[node name="BuyResearch" type="Button" parent="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer/HBoxContainer"]
+margin_left = 347.0
+margin_right = 564.0
+margin_bottom = 85.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+text = "UPGRADE"
+[connection signal="pressed" from="Back" to="." method="_on_back"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer/PRDevelContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer/MindControlContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer2/MiningContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer2/ClericalContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer/HBoxContainer/BuyResearch" to="HBoxContainer/VBoxContainer2/DroneTestingContainer/VBoxContainer/HBoxContainer" method="_buy_Research"]

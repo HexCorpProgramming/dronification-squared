@@ -23,16 +23,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 62.0
-margin_right = 546.0
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer"]
+margin_right = 44.0
 margin_bottom = 57.0
-rect_min_size = Vector2( 480, 0 )
+size_flags_horizontal = 3
+color = Color( 1, 0.4, 1, 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 44.0
+margin_right = 478.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 484.0
+margin_right = 434.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer"]
@@ -42,11 +48,13 @@ text = "RECRUITS"
 
 [node name="Control" type="Control" parent="HBoxContainer/PanelContainer/HBoxContainer"]
 margin_left = 182.0
-margin_right = 452.0
+margin_right = 402.0
 margin_bottom = 49.0
-rect_min_size = Vector2( 270, 49 )
+rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer/Control"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer/HBoxContainer/Control" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -59,52 +67,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 546.0
-margin_right = 1026.0
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+margin_left = 478.0
+margin_right = 522.0
 margin_bottom = 57.0
-rect_min_size = Vector2( 480, 0 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
-margin_left = 32.0
-margin_top = 4.0
-margin_right = 480.0
-margin_bottom = 53.0
-
-[node name="Label" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
-margin_right = 139.0
-margin_bottom = 49.0
-text = "MONEY"
-
-[node name="Control2" type="Control" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
-margin_left = 139.0
-margin_right = 439.0
-margin_bottom = 49.0
-rect_min_size = Vector2( 300, 49 )
-
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2/Control2"]
-margin_top = -4.0
-margin_right = 192.0
-margin_bottom = 52.5283
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
-text = "00000000"
-align = 2
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-LogicNumber = "money"
+size_flags_horizontal = 3
+color = Color( 1, 0.4, 1, 1 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1026.0
-margin_right = 1465.0
+margin_left = 522.0
+margin_right = 981.0
 margin_bottom = 57.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/PanelContainer2"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 439.0
+margin_right = 459.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
@@ -114,11 +93,13 @@ text = "MATERIALS"
 
 [node name="Control3" type="Control" parent="HBoxContainer/PanelContainer2/HBoxContainer3"]
 margin_left = 207.0
-margin_right = 407.0
+margin_right = 427.0
 margin_bottom = 49.0
-rect_min_size = Vector2( 200, 49 )
+rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3/Control3"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer2/HBoxContainer3/Control3" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -132,15 +113,70 @@ __meta__ = {
 }
 LogicNumber = "materials"
 
-[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
-margin_left = 1465.0
-margin_right = 1858.0
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
+margin_left = 981.0
+margin_right = 1025.0
 margin_bottom = 57.0
+size_flags_horizontal = 3
+color = Color( 1, 0.4, 1, 1 )
+
+[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 1025.0
+margin_right = 1416.0
+margin_bottom = 57.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/PanelContainer3"]
+margin_left = 32.0
+margin_top = 4.0
+margin_right = 391.0
+margin_bottom = 53.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
+margin_right = 139.0
+margin_bottom = 49.0
+text = "MONEY"
+
+[node name="Control2" type="Control" parent="HBoxContainer/PanelContainer3/HBoxContainer2"]
+margin_left = 139.0
+margin_right = 359.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 220, 49 )
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer3/HBoxContainer2/Control2" groups=[
+"tickable",
+]]
+margin_top = -4.0
+margin_right = 192.0
+margin_bottom = 52.5283
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+text = "00000000"
+align = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LogicNumber = "money"
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
+margin_left = 1416.0
+margin_right = 1460.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+color = Color( 1, 0.4, 1, 1 )
+
+[node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer"]
+margin_left = 1460.0
+margin_right = 1873.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/PanelContainer4"]
 margin_left = 32.0
 margin_top = 4.0
-margin_right = 393.0
+margin_right = 413.0
 margin_bottom = 53.0
 
 [node name="Label" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
@@ -150,11 +186,13 @@ text = "SCIENCE"
 
 [node name="Control4" type="Control" parent="HBoxContainer/PanelContainer4/HBoxContainer4"]
 margin_left = 161.0
-margin_right = 361.0
+margin_right = 381.0
 margin_bottom = 49.0
-rect_min_size = Vector2( 200, 49 )
+rect_min_size = Vector2( 220, 49 )
 
-[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4/Control4"]
+[node name="Label2" type="Label" parent="HBoxContainer/PanelContainer4/HBoxContainer4/Control4" groups=[
+"tickable",
+]]
 margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
@@ -167,3 +205,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 LogicNumber = "science"
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer"]
+margin_left = 1873.0
+margin_right = 1920.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+color = Color( 1, 0.4, 1, 1 )

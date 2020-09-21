@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/clicker_training_chill_pill_version_2.ogg" type="AudioStream" id=1]
+
+[node name="Audio" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Music"

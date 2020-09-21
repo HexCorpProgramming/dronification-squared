@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/clicker_training_chill_pill_version_2.ogg-96f49d8bd8a1be2e3fa8490b90d48e24.oggstr"
+
+[deps]
+
+source_file="res://Assets/clicker_training_chill_pill_version_2.ogg"
+dest_files=[ "res://.import/clicker_training_chill_pill_version_2.ogg-96f49d8bd8a1be2e3fa8490b90d48e24.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
