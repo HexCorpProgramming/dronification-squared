@@ -117,6 +117,8 @@ func add_recruits(amnt):
 
 func create_dict():
 	var save_dict = {
+		# User Info
+		"ID" : Global.ID,
 		# Resources
 		"drones" : drones_literal,
 		"recruits" : recruits_literal,
@@ -141,7 +143,11 @@ func create_dict():
 	return save_dict
 
 func parse_dict(dict):
+	#TODO, Make this a loop with an array of all the dictionary keys
 	#load all data
+	if dict.has("ID"):
+		Global.ID = dict["ID"]
+	
 	drones_literal = dict["drones"]
 	recruits_literal = dict["recruits"]
 	money = dict["money"]

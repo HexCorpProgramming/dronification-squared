@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Menus/Fonts/MiniUIFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://Assets/Research Pod.png" type="Texture" id=12]
+[ext_resource path="res://Menus/Character.gd" type="Script" id=13]
 
 [node name="Research" type="Control"]
 anchor_right = 1.0
@@ -31,10 +32,29 @@ region_enabled = true
 region_rect = Rect2( 3500, 0, 15840, 6600 )
 region_filter_clip = true
 
-[node name="Research Pod" type="Sprite" parent="."]
-position = Vector2( 323.625, 669.811 )
-scale = Vector2( 0.134, 0.134 )
-texture = ExtResource( 12 )
+[node name="Research Pod" type="TextureButton" parent="."]
+margin_left = 58.4009
+margin_top = 226.725
+margin_right = 589.041
+margin_bottom = 1111.13
+texture_normal = ExtResource( 12 )
+expand = true
+script = ExtResource( 13 )
+text = [ "Drone stored. Status: Optimal.", "Drone stored. Resistance: Negligible." ]
+
+[node name="TextBoxHolder" type="Control" parent="Research Pod"]
+anchor_left = 0.334
+anchor_top = 0.064
+anchor_right = 0.661
+anchor_bottom = 0.088
+margin_left = -122.234
+margin_top = 620.398
+margin_right = 136.247
+margin_bottom = 620.173
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Back" parent="." instance=ExtResource( 10 )]
 

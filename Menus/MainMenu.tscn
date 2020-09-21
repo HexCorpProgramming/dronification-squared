@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Menus/DroneCount.gd" type="Script" id=5]
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/SaveButtons.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Hive Mxtress.bmp" type="BitMap" id=8]
+[ext_resource path="res://Menus/Character.gd" type="Script" id=9]
 
 [sub_resource type="Theme" id=1]
 VBoxContainer/constants/separation = 4
@@ -24,10 +26,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hive Mxtress" type="Sprite" parent="."]
-position = Vector2( 654.612, 1177.52 )
-scale = Vector2( 0.344893, 0.344893 )
-texture = ExtResource( 3 )
+[node name="Hive Mxtress" type="TextureButton" parent="."]
+margin_right = 1308.0
+margin_bottom = 2343.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+texture_click_mask = ExtResource( 8 )
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+text = [ "Hello, secretary #%id. Working hard, I assume?", "I know, I know, you wish to worship me, but you do have tasks to complete." ]
+
+[node name="TextBoxHolder" type="Control" parent="Hive Mxtress"]
+anchor_left = 0.173
+anchor_top = 0.208
+anchor_right = 0.5
+anchor_bottom = 0.229
+margin_left = -0.284012
+margin_top = -3.34402
+margin_bottom = -1.05304
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Back" parent="." instance=ExtResource( 6 )]
 margin_top = 929.807
