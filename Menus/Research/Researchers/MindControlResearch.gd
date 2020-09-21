@@ -13,3 +13,4 @@ func _buy_Research():
 		Logic.convert_upgrades += 1
 		Logic.convert_mod = (pow(2, Logic.convert_upgrades-1) * Logic.upgrade_boost)+1.00
 		get_tree().call_group("converter","update_display")
+		update_display()

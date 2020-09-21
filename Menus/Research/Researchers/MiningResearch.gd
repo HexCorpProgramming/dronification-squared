@@ -13,3 +13,4 @@ func _buy_Research():
 		Logic.materials_upgrades += 1
 		Logic.materials_mod = (pow(2, Logic.materials_upgrades-1) * Logic.upgrade_boost)+1.00
 		get_tree().call_group("materials","update_display")
+		update_display()
