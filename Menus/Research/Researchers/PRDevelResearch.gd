@@ -13,3 +13,4 @@ func _buy_Research():
 		Logic.recruit_upgrades += 1
 		Logic.recruit_mod = (pow(2, Logic.recruit_upgrades-1) * Logic.upgrade_boost)+1.00
 		get_tree().call_group("auto-recruiter","update_display")
+		update_display()
