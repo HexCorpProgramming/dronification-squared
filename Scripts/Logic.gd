@@ -201,7 +201,10 @@ func format_number(number):
 	var offset = 0
 	var logo = log(number) / log(10)
 	
-	if logo >= 12:
+	if logo >= 15:
+		label = "Q"
+		offset = 15
+	elif logo >= 12:
 		label = "T"
 		offset = 12
 	elif logo >= 9:
@@ -242,7 +245,10 @@ func format_number_int(number):
 	var offset = 0
 	var logo = log(number) / log(10)
 	
-	if logo >= 11.99:
+	if logo >= 14.99:
+		label = "Q"
+		offset = 15
+	elif logo >= 11.99:
 		label = "T"
 		offset = 12
 	elif logo >= 8.99:
