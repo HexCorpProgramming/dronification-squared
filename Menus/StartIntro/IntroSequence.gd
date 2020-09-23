@@ -57,7 +57,7 @@ func clean_id(id):
 
 func generate_id(rngseed):
 	var rng = RandomNumberGenerator.new()
-	rng.seed = rngseed
+	rng.seed = rngseed + OS.get_unix_time()
 	var id = rng.randi_range(0,9999)
 	return String(id).pad_zeros(4)
 	
