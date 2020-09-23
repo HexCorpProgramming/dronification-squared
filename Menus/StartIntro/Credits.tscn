@@ -94,4 +94,12 @@ Character Art
 "
 
 [node name="Back" parent="." instance=ExtResource( 2 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1542.26
+margin_top = 1007.97
+margin_right = 1908.26
+margin_bottom = 1257.97
+custom_fonts/font = ExtResource( 3 )
+text = "Version 0.1.2"
 [connection signal="pressed" from="Back" to="." method="_on_start"]
