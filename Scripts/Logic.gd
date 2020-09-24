@@ -57,20 +57,6 @@ var multi = 1
 onready var timer = get_node("Timer")
 
 func _ready():
-	drones_literal = 0
-	drones_rounded = 0
-	recruits_literal = 0
-	recruits_rounded = 0
-	money = 0
-	materials = 0
-	science = 0
-	
-	auto_recruiters = 0
-	conversion_chambers = 1 # Remember, first one's free :]
-	assigned_drones_materials = 0
-	assigned_drones_money = 0
-	assigned_drones_science = 0
-	
 	#Start ticking the timer.
 	timer.set_wait_time(1.0/TICK_MOD)
 	timer.connect("timeout",self,"tick")
@@ -194,6 +180,9 @@ func parse_dict(dict):
 	get_tree().call_group("display", "update_display")
 	get_tree().call_group("operations", "update_text")
 	
+	
+	
+	
 func format_number(number):
 	var result = "%.2f"
 	var label = ""
@@ -283,3 +272,40 @@ func format_number_int(number):
 	result = result + label
 	
 	return result
+
+func reset_values():
+	#Resources
+	drones_literal = 0.0
+	drones_rounded = 0
+	recruits_literal = 0 
+	recruits_rounded = 0
+	money = 0
+	materials = 0
+	science = 0
+
+	#Producers
+	auto_recruiters = 0 #Recruits... Recruits
+	conversion_chambers = 1 #Converts drones, first ones free! :)
+	available_drones = 0 #Not for much longer 
+	assigned_drones_materials = 0 #Gather materials
+	assigned_drones_money = 0 #Gather money
+	assigned_drones_science = 0 #Gather science
+
+	recruit_upgrades = 0
+	convert_upgrades = 0
+	materials_upgrades = 0
+	money_upgrades = 0
+	science_upgrades = 0
+
+	#Research modifiers
+	recruit_mod = 1.00
+	convert_mod = 1.00
+	materials_mod = 1.00
+	money_mod = 1.00
+	science_mod = 1.00
+
+	upgrade_boost = 0.10
+
+	#Values to be taken and displayed
+	drones_per_second = 0.00
+	multi = 1

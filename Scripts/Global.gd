@@ -7,6 +7,8 @@ func _process(_delta):
 		OS.set_window_fullscreen(!OS.is_window_fullscreen())
 
 func clear_data():
+	Logic.reset_values()
 	var dir = Directory.new()
 	dir.open("user://")
 	dir.remove("savefile.save")
+	
