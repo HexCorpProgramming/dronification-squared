@@ -25,11 +25,11 @@ __meta__ = {
 
 [node name="Research PodBG" type="Sprite" parent="."]
 modulate = Color( 0.317647, 0.317647, 0.317647, 1 )
-position = Vector2( 1058.69, 669.811 )
-scale = Vector2( 0.134091, 0.134091 )
+position = Vector2( 995.662, 669.811 )
+scale = Vector2( 0.268, 0.268 )
 texture = ExtResource( 12 )
 region_enabled = true
-region_rect = Rect2( 3500, 0, 15840, 6600 )
+region_rect = Rect2( 3500, 0, 7920, 3300 )
 region_filter_clip = true
 
 [node name="Research Pod" type="TextureButton" parent="."]

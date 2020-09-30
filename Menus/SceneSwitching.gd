@@ -31,9 +31,11 @@ func _on_credits():
 	get_node("/root/Root/Credits").visible = true
 	
 func _on_start():
+	get_node("HBoxContainer").save_game()
 	visible = false
 	get_node("/root/Root/Header").visible = false
 	get_node("/root/Root/Start").visible = true
+	get_node("/root/Root/Start/MainMenuElements")._ready()
 
 func _on_back():
 	visible = false
