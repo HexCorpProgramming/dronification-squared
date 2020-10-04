@@ -1,5 +1,7 @@
 extends TextureButton
 
+onready var saveload = load("res://Menus/SaveButtons.gd").new()
+
 var askconfirm = false
 
 func _hide():
@@ -14,5 +16,4 @@ func _pressed():
 		$Label2.visible = true
 	else:
 		Global.clear_data()
-		get_parent()._ready()
-		_hide()
+		get_tree().reload_current_scene()

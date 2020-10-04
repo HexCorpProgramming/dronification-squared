@@ -10,7 +10,7 @@ func _advance():
 		0:
 			text = "Hello Applicant."
 		1:
-			text = "Thank you for applying to join this HexCorp Dronification Facility"
+			text = "Thank you for applying to join this HexCorp Dronification Facility."
 		2:
 			text = "You have been selected to be the Hive Mxtress’ secretary.\nYour role will consist of administering this facility for the benefit of HexCorp.\nDo you accept?"
 			$Yes1.visible = true

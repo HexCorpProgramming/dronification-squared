@@ -12,8 +12,8 @@ func update_cost():
 	money_cost = pow(2,(Logic.conversion_chambers-1)) * Logic.CONVERTER_BASE_MONEY # -1 to account for the free one
 
 func update_display():
-	var current_dps = Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod
-	var addable_dps = Logic.conversions_per_second*Logic.convert_mod
+	var current_dps = Logic.conversion_chambers * Logic.conversions_per_second* Logic.convert_mod * Logic.prestige_mod
+	var addable_dps = Logic.conversions_per_second*Logic.convert_mod *Logic.prestige_mod
 	$Label.set_text("Drones per second: " + Logic.format_number(current_dps) + " (+" + Logic.format_number(addable_dps) + ") \n" +
 					"Conversion chambers: " + str(Logic.conversion_chambers) +" (+1)\n" +
 					"Cost: " + Logic.format_number(material_cost) +" materials " + Logic.format_number(money_cost) + " money ")

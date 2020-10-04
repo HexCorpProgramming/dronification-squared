@@ -1,6 +1,8 @@
 extends Node
 # This is the main node for all mathematics calculations.
 
+const VICTORY_AMOUNT = 7000000000
+
 const RECRUITER_BASE_MATERIAL = 100
 const RECRUITER_BASE_MONEY = 400
 
@@ -14,7 +16,7 @@ const TICK_MOD = 5.0 # x ticks per second,
 #Resources
 var drones_literal: float = 0
 var drones_rounded: int = 0
-var recruits_literal = 0 
+var recruits_literal = 0
 var recruits_rounded = 0
 var money = 0
 var materials = 0
@@ -52,6 +54,10 @@ var conversions_per_second = 0.25
 var drones_per_second = 0.00
 var multi = 1
 
+# Prestige
+var prestige_count = 0 
+var prestige_mod = 1.00
+
 
 #Timer
 onready var timer = get_node("Timer")
@@ -74,7 +80,7 @@ func tick():
 	recruits_rounded = int(ceil(recruits_literal))
 	
 	#Only do this if doing a recruit wont make the recruit resource go negative
-	var converted = (conversions_per_second * conversion_chambers* convert_mod) / TICK_MOD
+	var converted = (conversions_per_second * conversion_chambers* convert_mod * prestige_mod) / TICK_MOD
 	if (recruits_literal-converted) >= 0:
 		drones_literal += converted 
 		recruits_literal -= converted # Take out of recruit resource
@@ -90,13 +96,18 @@ func tick():
 	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
 	
 	#Updated the stored drones_per_second and assignment multipliers
-	drones_per_second = conversion_chambers * conversions_per_second* convert_mod
+	drones_per_second = conversion_chambers * conversions_per_second* convert_mod * prestige_mod
 	if multi * 1000 < drones_per_second:
 		multi *= 1000
 		
 	#update on-tick displays
 	get_tree().call_group("tickable", "tick")
-		
+	
+	#Check for WIN CONDITION
+	if drones_literal >= VICTORY_AMOUNT:
+		get_node("/root/Root/Prestige").visible = true
+	
+	
 func add_recruits(amnt):
 	recruits_literal += amnt
 	recruits_rounded = int(ceil(recruits_literal))
@@ -123,7 +134,10 @@ func create_dict():
 		"convert_upgrades" : convert_upgrades,
 		"money_upgrades" : money_upgrades,
 		"materials_upgrades" : materials_upgrades,
-		"science_upgrades" : science_upgrades
+		"science_upgrades" : science_upgrades,
+		# Prestige
+		"prestige_count" : prestige_count,
+		"prestige_mod" : prestige_mod
 	}
 	
 	return save_dict
@@ -152,6 +166,10 @@ func parse_dict(dict):
 	money_upgrades = dict["money_upgrades"]
 	materials_upgrades = dict["materials_upgrades"]
 	science_upgrades = dict["science_upgrades"]
+	
+	if dict.has("prestige_count"):
+		prestige_count = dict["prestige_count"]
+		prestige_mod = dict["prestige_mod"]
 	
 	#Update mods
 	if recruit_upgrades != 0:
@@ -309,3 +327,9 @@ func reset_values():
 	#Values to be taken and displayed
 	drones_per_second = 0.00
 	multi = 1
+	
+	prestige_count = 0 
+	prestige_mod = 1.00
+	
+	var dir = Directory.new()
+	dir.remove("user://savefile.save")

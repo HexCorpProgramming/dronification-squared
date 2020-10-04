@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=1]
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Menus/Fonts/PinkBorderSub.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Menus/StartIntro/CreditsText.tscn" type="PackedScene" id=4]
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -13,93 +12,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 1916.0
-margin_bottom = 1077.0
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="RichTextLabel" parent="HBoxContainer"]
-margin_right = 956.0
-margin_bottom = 1077.0
-size_flags_horizontal = 3
-custom_fonts/italics_font = ExtResource( 4 )
-custom_fonts/normal_font = ExtResource( 3 )
-bbcode_enabled = true
-bbcode_text = "[center]
-
-Initial Design and Concept
-[color=#ff66ff][i]Hive Mxtress[/i][/color]
-
-Programming
-[color=#ff66ff][i]Drone #9813
-Drone #1889[/i][/color]
-
-UI Construction
-[color=#ff66ff][i]Drone #3287[/i][/color]
-
-[/center]
-"
-text = "
-
-Initial Design and Concept
-Hive Mxtress
-
-Programming
-Drone #9813
-Drone #1889
-
-UI Construction
-Drone #3287
-
-
-"
-scroll_active = false
-
-[node name="Label2" type="RichTextLabel" parent="HBoxContainer"]
-margin_left = 960.0
-margin_right = 1916.0
-margin_bottom = 1077.0
-size_flags_horizontal = 3
-custom_fonts/italics_font = ExtResource( 4 )
-custom_fonts/normal_font = ExtResource( 3 )
-bbcode_enabled = true
-bbcode_text = "[center]
-Start Screen and Intro 
-[color=#ff66ff][i]Drone #1211[/i][/color]
-
-Concept Art
-[color=#ff66ff][i]Drone #5845[/i][/color]
-
-\"That one drone with a Mac\"
-[color=#ff66ff][i]Drone #0825[/i][/color]
-
-Character Art
-[color=#ff66ff][i]@sleepystephbot[/i][/color]
-[/center]"
-text = "
-Start Screen and Intro 
-Drone #1211
-
-Concept Art
-Drone #5845
-
-\"That one drone with a Mac\"
-Drone #0825
-
-Character Art
-@sleepystephbot
-"
+[node name="HBoxContainer" parent="." instance=ExtResource( 4 )]
 
 [node name="Back" parent="." instance=ExtResource( 2 )]
-
-[node name="Label" type="Label" parent="."]
-margin_left = 1542.26
-margin_top = 1007.97
-margin_right = 1908.26
-margin_bottom = 1257.97
-custom_fonts/font = ExtResource( 3 )
-text = "Version 0.1.2"
 [connection signal="pressed" from="Back" to="." method="_on_start"]
