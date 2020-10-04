@@ -49,12 +49,12 @@ func update_text():
 func swap_operations(operation):
 	if operation == "+":
 		assign1.text = assign1.text.replace("-","+")
-		assign10.text = assign100.text.replace("-","+")
+		assign10.text = assign10.text.replace("-","+")
 		assign100.text = assign100.text.replace("-","+")
 		assign1K.text = assign1K.text.replace("-","+")
 	else:
 		assign1.text = assign1.text.replace("+","-")
-		assign10.text = assign100.text.replace("+","-")
+		assign10.text = assign10.text.replace("+","-")
 		assign100.text = assign100.text.replace("+","-")
 		assign1K.text = assign1K.text.replace("+","-")
 
