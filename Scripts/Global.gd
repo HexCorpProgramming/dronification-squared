@@ -1,5 +1,7 @@
 extends Node
 
+var r = load("res://Scripts/Research.gd").new()
+
 var ID = "0000"
 
 var is_assigning = true

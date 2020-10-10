@@ -1,7 +1,8 @@
 extends HBoxContainer
 
 export (String, "Materials", "Money", "Science") var resource_name = "Materials"
-export (String, "assigned_drones_materials", "assigned_drones_money", "assigned_drones_science") var assign_var = "assigned_drones_materials"
+export (String, "assigned_materials", "assigned_money", "assigned_science") var assign_var = "assigned_materials"
+export (String, "materials_mod", "money_mod", "science_mod") var mod_var = "materials_mod"
 
 onready var label = get_node("VBoxContainer/Label2")
 
@@ -22,9 +23,13 @@ func get_assign_var():
 func set_assign_var(value):
 	Logic.set(assign_var,value)
 
+func get_mod_var():
+	return Logic.get(mod_var)
+
 func update_display():
-	var current_sps = get_assign_var() * Logic.resources_per_drone_per_second * Logic.science_mod
-	var addable_sps = Logic.resources_per_drone_per_second * Logic.science_mod
+
+	var current_sps = get_assign_var() * Logic.resources_per_drone_per_second * get_mod_var()
+	var addable_sps = Logic.resources_per_drone_per_second * get_mod_var()
 	label.set_text(resource_name + " per second: " + Logic.format_number(current_sps) + "  +(" + Logic.format_number(addable_sps) + ")\n"
 			+ "Drones Assigned: " + Logic.format_number_int(get_assign_var()))
 

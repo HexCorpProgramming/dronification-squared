@@ -13,6 +13,13 @@ const RESEARCH_BASE_SCIENCE = 100
 
 const TICK_MOD = 5.0 # x ticks per second, 
 
+const GLOBAL_KEYS = ["ID", "r"]
+
+const LOGIC_KEYS = ["recruits_literal", "drones_literal", "materials", "money",
+					"science", "auto_recruiters", "conversion_chambers",
+					"assigned_materials", "assigned_money", "assigned_science",
+					"prestige_count", "prestige_mod"]
+
 #Resources
 var drones_literal: float = 0
 var drones_rounded: int = 0
@@ -26,15 +33,9 @@ var science = 0
 var auto_recruiters = 0 #Recruits... Recruits
 var conversion_chambers = 1 #Converts drones, first ones free! :)
 var available_drones = 0 #Not for much longer 
-var assigned_drones_materials = 0 #Gather materials
-var assigned_drones_money = 0 #Gather money
-var assigned_drones_science = 0 #Gather science
-
-var recruit_upgrades = 0
-var convert_upgrades = 0
-var materials_upgrades = 0
-var money_upgrades = 0
-var science_upgrades = 0
+var assigned_materials = 0 #Gather materials
+var assigned_money = 0 #Gather money
+var assigned_science = 0 #Gather science
 
 #Research modifiers
 var recruit_mod = 1.00
@@ -42,8 +43,6 @@ var convert_mod = 1.00
 var materials_mod = 1.00
 var money_mod = 1.00
 var science_mod = 1.00
-
-var upgrade_boost = 0.10
 
 #Constants
 var recruits_per_second = 0.25
@@ -58,6 +57,7 @@ var multi = 1
 var prestige_count = 0 
 var prestige_mod = 1.00
 
+var update_display_next_tick = false
 
 #Timer
 onready var timer = get_node("Timer")
@@ -75,6 +75,13 @@ func _ready():
 	#Use ceil for recruit rounding, and floor for drone rounding
 	#Makes the conversions look better in the UI :>
 func tick():
+	#Calculate Mods
+	materials_mod = 1.0 + ((float(Global.r.researches_bought[0]) * 20.0) / 100.0)
+	money_mod = 1.0 + ((float(Global.r.researches_bought[1]) * 20.0) / 100.0)
+	science_mod = 1.0 + ((float(Global.r.researches_bought[2]) * 20.0) / 100.0)
+	recruit_mod = 1.0 + ((float(Global.r.researches_bought[3]) * 20.0) / 100.0)
+	convert_mod = 1.0 + ((float(Global.r.researches_bought[4]) * 20.0) / 100.0)
+	
 	#Every tick, add resources relative to the amount of producers.
 	recruits_literal += (recruits_per_second * auto_recruiters*recruit_mod) / TICK_MOD
 	recruits_rounded = int(ceil(recruits_literal))
@@ -87,13 +94,15 @@ func tick():
 		drones_rounded = int(floor(drones_literal))
 		recruits_rounded = int(ceil(recruits_literal))
 	
+
+	
 	#Resource production
-	materials += (resources_per_drone_per_second * assigned_drones_materials * materials_mod) / TICK_MOD
-	money += (resources_per_drone_per_second * assigned_drones_money * money_mod) / TICK_MOD
-	science += (resources_per_drone_per_second * assigned_drones_science * science_mod) / TICK_MOD
+	materials += (resources_per_drone_per_second * assigned_materials * materials_mod) / TICK_MOD
+	money += (resources_per_drone_per_second * assigned_money * money_mod) / TICK_MOD
+	science += (resources_per_drone_per_second * assigned_science * science_mod) / TICK_MOD
 	
 	# Update the amount of availible drones
-	available_drones = drones_rounded - (assigned_drones_materials + assigned_drones_money + assigned_drones_science)
+	available_drones = drones_rounded - (assigned_materials + assigned_money + assigned_science)
 	
 	#Updated the stored drones_per_second and assignment multipliers
 	drones_per_second = conversion_chambers * conversions_per_second* convert_mod * prestige_mod
@@ -106,7 +115,10 @@ func tick():
 	#Check for WIN CONDITION
 	if drones_literal >= VICTORY_AMOUNT:
 		get_node("/root/Root/Prestige").visible = true
-	
+		
+	if update_display_next_tick:
+		get_tree().call_group("display","update_display")
+		update_display_next_tick = false
 	
 func add_recruits(amnt):
 	recruits_literal += amnt
@@ -117,8 +129,8 @@ func create_dict():
 		# User Info
 		"ID" : Global.ID,
 		# Resources
-		"drones" : drones_literal,
-		"recruits" : recruits_literal,
+		"drones_literal" : drones_literal,
+		"recruits_literal" : recruits_literal,
 		"money" : money,
 		"materials" : materials,
 		"science" : science,
@@ -126,18 +138,15 @@ func create_dict():
 		"auto_recruiters" : auto_recruiters,
 		"conversion_chambers" : conversion_chambers,
 		# Assignments
-		"assigned_money" : assigned_drones_money,
-		"assigned_materials" : assigned_drones_materials,
-		"assigned_science" : assigned_drones_science,
+		"assigned_money" : assigned_money,
+		"assigned_materials" : assigned_materials,
+		"assigned_science" : assigned_science,
 		# Researches
-		"recruit_upgrades" : recruit_upgrades,
-		"convert_upgrades" : convert_upgrades,
-		"money_upgrades" : money_upgrades,
-		"materials_upgrades" : materials_upgrades,
-		"science_upgrades" : science_upgrades,
+		"r.researches_bought" : Global.r.researches_bought,
 		# Prestige
 		"prestige_count" : prestige_count,
 		"prestige_mod" : prestige_mod
+
 	}
 	
 	return save_dict
@@ -148,8 +157,19 @@ func parse_dict(dict):
 	if dict.has("ID"):
 		Global.ID = dict["ID"]
 	
-	drones_literal = dict["drones"]
-	recruits_literal = dict["recruits"]
+	if dict.has("r.researches_bought"):
+		Global.r.researches_bought = dict["r.researches_bought"]
+	
+	# Older save file support
+	if dict.has("drones_literal"):
+		drones_literal = dict["drones_literal"]
+	else:
+		drones_literal = dict["drones"]
+	
+	if dict.has("recruits_literal"):
+		recruits_literal = dict["recruits_literal"]
+	else:
+		recruits_literal = dict["recruits"]
 	money = dict["money"]
 	materials = dict["materials"]
 	science = dict["science"]
@@ -157,41 +177,13 @@ func parse_dict(dict):
 	auto_recruiters = dict["auto_recruiters"]
 	conversion_chambers = dict["conversion_chambers"]
 	
-	assigned_drones_money = dict["assigned_money"]
-	assigned_drones_materials = dict["assigned_materials"]
-	assigned_drones_science = dict["assigned_science"]
-	
-	recruit_upgrades = dict["recruit_upgrades"]
-	convert_upgrades = dict["convert_upgrades"]
-	money_upgrades = dict["money_upgrades"]
-	materials_upgrades = dict["materials_upgrades"]
-	science_upgrades = dict["science_upgrades"]
+	assigned_money = dict["assigned_money"]
+	assigned_materials = dict["assigned_materials"]
+	assigned_science = dict["assigned_science"]
 	
 	if dict.has("prestige_count"):
 		prestige_count = dict["prestige_count"]
 		prestige_mod = dict["prestige_mod"]
-	
-	#Update mods
-	if recruit_upgrades != 0:
-		recruit_mod = (pow(2, Logic.recruit_upgrades-1) * Logic.upgrade_boost)+1.00
-	else:
-		recruit_mod = 1.00
-	if convert_upgrades != 0:
-		convert_mod = (pow(2, Logic.convert_upgrades-1) * Logic.upgrade_boost)+1.00
-	else:
-		convert_mod = 1.00
-	if money_upgrades != 0:
-		money_mod = (pow(2, Logic.money_upgrades-1) * Logic.upgrade_boost)+1.00
-	else:
-		money_mod = 1.00
-	if materials_upgrades != 0:
-		materials_mod = (pow(2, Logic.materials_upgrades-1) * Logic.upgrade_boost)+1.00
-	else:
-		materials_mod = 1.00
-	if science_upgrades != 0:
-		science_mod = (pow(2, Logic.science_upgrades-1) * Logic.upgrade_boost)+1.00
-	else:
-		science_mod = 1.00
 	
 	tick()
 	get_tree().call_group("buildings", "update_cost")
@@ -305,15 +297,9 @@ func reset_values():
 	auto_recruiters = 0 #Recruits... Recruits
 	conversion_chambers = 1 #Converts drones, first ones free! :)
 	available_drones = 0 #Not for much longer 
-	assigned_drones_materials = 0 #Gather materials
-	assigned_drones_money = 0 #Gather money
-	assigned_drones_science = 0 #Gather science
-
-	recruit_upgrades = 0
-	convert_upgrades = 0
-	materials_upgrades = 0
-	money_upgrades = 0
-	science_upgrades = 0
+	assigned_materials = 0 #Gather materials
+	assigned_money = 0 #Gather money
+	assigned_science = 0 #Gather science
 
 	#Research modifiers
 	recruit_mod = 1.00
@@ -321,8 +307,6 @@ func reset_values():
 	materials_mod = 1.00
 	money_mod = 1.00
 	science_mod = 1.00
-
-	upgrade_boost = 0.10
 
 	#Values to be taken and displayed
 	drones_per_second = 0.00

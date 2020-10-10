@@ -92,7 +92,6 @@ __meta__ = {
 [node name="MaterialContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_right = 782.0
 margin_bottom = 186.0
-hint_tooltip = "this is a test tooltip"
 size_flags_horizontal = 0
 theme = ExtResource( 11 )
 __meta__ = {
@@ -201,7 +200,8 @@ size_flags_horizontal = 3
 custom_constants/separation = 4
 script = ExtResource( 5 )
 resource_name = "Money"
-assign_var = "assigned_drones_money"
+assign_var = "assigned_money"
+mod_var = "money_mod"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BuisnessContainer/HBoxContainer"]
 margin_right = 398.0
@@ -291,7 +291,8 @@ grow_vertical = 0
 custom_constants/separation = 0
 script = ExtResource( 5 )
 resource_name = "Science"
-assign_var = "assigned_drones_science"
+assign_var = "assigned_science"
+mod_var = "science_mod"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScienceContainer/HBoxContainer"]
 margin_right = 407.0
@@ -360,10 +361,10 @@ text = " +1K "
 [node name="Label" type="Label" parent="." groups=[
 "tickable",
 ]]
-margin_left = 461.48
-margin_top = 252.155
-margin_right = 1072.48
-margin_bottom = 433.155
+margin_left = 463.262
+margin_top = 253.937
+margin_right = 1074.26
+margin_bottom = 434.937
 custom_fonts/font = ExtResource( 2 )
 text = "Drones Available:
  X.XXXX"
