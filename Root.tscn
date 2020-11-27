@@ -7,8 +7,8 @@
 [ext_resource path="res://Menus/Operations/Operations.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/Research/ResearchTree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menus/StartIntro/Intro.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Menus/StartIntro/Start.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Menus/StartIntro/Credits.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Menus/StartIntro/Credits.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Menus/StartIntro/Start.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Menus/Prestige.tscn" type="PackedScene" id=10]
 
 [node name="Root" type="Node2D"]
@@ -42,10 +42,10 @@ visible = false
 [node name="Intro" parent="." instance=ExtResource( 7 )]
 visible = false
 
-[node name="Credits" parent="." instance=ExtResource( 9 )]
+[node name="Credits" parent="." instance=ExtResource( 8 )]
 visible = false
 
-[node name="Start" parent="." instance=ExtResource( 8 )]
+[node name="Start" parent="." instance=ExtResource( 9 )]
 
 [node name="Prestige" parent="." instance=ExtResource( 10 )]
 visible = false

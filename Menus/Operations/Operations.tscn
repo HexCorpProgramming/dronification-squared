@@ -1,24 +1,24 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Assets/Hex Drone.png" type="Texture" id=1]
-[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Menus/Fonts/MiniUIFont.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Menus/Operations/Assigner.gd" type="Script" id=5]
-[ext_resource path="res://Menus/Operations/AvailibleDroneLabel.gd" type="Script" id=8]
-[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=10]
-[ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=11]
-[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=12]
-[ext_resource path="res://Menus/Character.gd" type="Script" id=13]
-[ext_resource path="res://Assets/Hex Drone.bmp" type="BitMap" id=14]
-[ext_resource path="res://Menus/Operations/AssignToggle.gd" type="Script" id=15]
+[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Hex Drone.png" type="Texture" id=3]
+[ext_resource path="res://Menus/Character.gd" type="Script" id=4]
+[ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=7]
+[ext_resource path="res://Menus/Operations/Assigner.gd" type="Script" id=8]
+[ext_resource path="res://Menus/Fonts/MiniUIFont.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Menus/Operations/AvailibleDroneLabel.gd" type="Script" id=11]
+[ext_resource path="res://Menus/Operations/AssignToggle.gd" type="Script" id=12]
+
 
 [node name="Operations" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 10 )
-script = ExtResource( 12 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -27,10 +27,9 @@ __meta__ = {
 margin_right = 706.448
 margin_bottom = 1828.3
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 1 )
-texture_click_mask = ExtResource( 14 )
+texture_normal = ExtResource( 3 )
 expand = true
-script = ExtResource( 13 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,14 +49,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" parent="." instance=ExtResource( 9 )]
+[node name="Back" parent="." instance=ExtResource( 5 )]
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 928.31
 margin_top = 50.7253
 margin_right = 1883.31
 margin_bottom = 226.725
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 6 )
 text = "OPERATIONS"
 align = 2
 uppercase = true
@@ -93,14 +92,14 @@ __meta__ = {
 margin_right = 782.0
 margin_bottom = 186.0
 size_flags_horizontal = 0
-theme = ExtResource( 11 )
+theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MaterialContainer" groups=[
-"display",
 "materials",
+"display",
 "operations",
 ]]
 margin_left = 2.0
@@ -109,7 +108,7 @@ margin_right = 780.0
 margin_bottom = 184.0
 size_flags_horizontal = 3
 custom_constants/separation = -23
-script = ExtResource( 5 )
+script = ExtResource( 8 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MaterialContainer/HBoxContainer"]
 margin_right = 547.0
@@ -129,7 +128,7 @@ margin_top = 83.0
 margin_right = 547.0
 margin_bottom = 150.0
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 9 )
 text = "Materials per second: X.XXXX +(X.XXXX)
 Drones Assigned: x.xxxX"
 
@@ -182,14 +181,14 @@ margin_top = 271.0
 margin_right = 660.0
 margin_bottom = 457.0
 size_flags_horizontal = 0
-theme = ExtResource( 11 )
+theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BuisnessContainer" groups=[
-"display",
 "money",
+"display",
 "operations",
 ]]
 margin_left = 2.0
@@ -198,7 +197,7 @@ margin_right = 658.0
 margin_bottom = 184.0
 size_flags_horizontal = 3
 custom_constants/separation = 4
-script = ExtResource( 5 )
+script = ExtResource( 8 )
 resource_name = "Money"
 assign_var = "assigned_money"
 mod_var = "money_mod"
@@ -219,7 +218,7 @@ text = "Business Integration"
 margin_top = 83.0
 margin_right = 398.0
 margin_bottom = 150.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 9 )
 text = "Money per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 __meta__ = {
@@ -275,12 +274,12 @@ margin_top = 542.0
 margin_right = 685.0
 margin_bottom = 728.0
 size_flags_horizontal = 0
-theme = ExtResource( 11 )
+theme = ExtResource( 7 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScienceContainer" groups=[
+"science",
 "display",
 "operations",
-"science",
 ]]
 margin_left = 2.0
 margin_top = 2.0
@@ -289,7 +288,7 @@ margin_bottom = 184.0
 grow_horizontal = 0
 grow_vertical = 0
 custom_constants/separation = 0
-script = ExtResource( 5 )
+script = ExtResource( 8 )
 resource_name = "Science"
 assign_var = "assigned_science"
 mod_var = "science_mod"
@@ -310,7 +309,7 @@ text = "Experimentation"
 margin_top = 83.0
 margin_right = 407.0
 margin_bottom = 150.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 9 )
 text = "Science per second: xxx +(xx)
 Drones Assigned xxx +(xx)"
 
@@ -365,12 +364,12 @@ margin_left = 463.262
 margin_top = 253.937
 margin_right = 1074.26
 margin_bottom = 434.937
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 10 )
 text = "Drones Available:
  X.XXXX"
 align = 1
 autowrap = true
-script = ExtResource( 8 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -381,7 +380,7 @@ margin_top = 697.0
 margin_right = 940.0
 margin_bottom = 782.0
 text = "Deassign Drones"
-script = ExtResource( 15 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

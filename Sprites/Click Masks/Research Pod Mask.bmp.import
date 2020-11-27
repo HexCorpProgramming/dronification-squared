@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hex Drone.png-47ce1bd6e8aea59af57ea9c478c73f1b.stex"
+path="res://.import/Research Pod Mask.bmp-07df3d3141a824a1c1819863a5c2da92.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hex Drone.png"
-dest_files=[ "res://.import/Hex Drone.png-47ce1bd6e8aea59af57ea9c478c73f1b.stex" ]
+source_file="res://Sprites/Click Masks/Research Pod Mask.bmp"
+dest_files=[ "res://.import/Research Pod Mask.bmp-07df3d3141a824a1c1819863a5c2da92.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

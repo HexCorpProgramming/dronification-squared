@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Research Pod.png-39e82f3563e83ef8bcaa4c6d176f1c7d.stex"
+path="res://.import/Research Pod.png-3ad9612a8e36d09ec734bd3422d698a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Research Pod.png"
-dest_files=[ "res://.import/Research Pod.png-39e82f3563e83ef8bcaa4c6d176f1c7d.stex" ]
+source_file="res://Sprites/Research Pod.png"
+dest_files=[ "res://.import/Research Pod.png-3ad9612a8e36d09ec734bd3422d698a3.stex" ]
 
 [params]
 

@@ -21,7 +21,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
-anchor_bottom = 1.01
+anchor_bottom = 1.0
 margin_right = 1.0
 margin_bottom = -43.0
 mouse_filter = 1
@@ -39,7 +39,7 @@ __meta__ = {
 anchor_left = 0.658
 anchor_right = 1.0
 anchor_bottom = 0.037
-margin_right = -3.8147e-06
+margin_right = -3.8147e-006
 margin_bottom = -0.292999
 __meta__ = {
 "_edit_use_anchors_": false

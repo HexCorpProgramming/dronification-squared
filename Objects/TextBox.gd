@@ -14,3 +14,6 @@ func _on_Char_timeout():
 	$Label.visible_characters += 1
 	if $Label.percent_visible == 1.00:
 		$Disappear.start()
+		
+func _set_position(vec2):
+	print("Setting position!")

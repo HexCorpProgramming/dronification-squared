@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hex Employee.png-918ce244bdeedaceeda7ff10f6c9313a.stex"
+path="res://.import/Hex Drone.png-99aed7fb653c1e097f4a4ebfacfd789c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hex Employee.png"
-dest_files=[ "res://.import/Hex Employee.png-918ce244bdeedaceeda7ff10f6c9313a.stex" ]
+source_file="res://Sprites/Hex Drone.png"
+dest_files=[ "res://.import/Hex Drone.png-99aed7fb653c1e097f4a4ebfacfd789c.stex" ]
 
 [params]
 

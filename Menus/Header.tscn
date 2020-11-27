@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menus/HeaderTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Menus/NumberDisplay.gd" type="Script" id=2]
-[ext_resource path="res://Menus/Fonts/ResourceMonospace.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Menus/RecruitCount.gd" type="Script" id=4]
+[ext_resource path="res://Menus/Fonts/ResourceMonospace.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Menus/RecruitCount.gd" type="Script" id=3]
+[ext_resource path="res://Menus/NumberDisplay.gd" type="Script" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -59,10 +59,10 @@ margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 text = "00000000"
 align = 2
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -104,10 +104,10 @@ margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 text = "00000000"
 align = 2
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,10 +151,10 @@ margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 text = "00000000"
 align = 2
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -197,10 +197,10 @@ margin_top = -4.0
 margin_right = 192.0
 margin_bottom = 52.5283
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 text = "00000000"
 align = 2
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

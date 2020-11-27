@@ -1,39 +1,38 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Hex Employee.png" type="Texture" id=1]
-[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Menus/Recruitment/AutoRecruiters.gd" type="Script" id=4]
+[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Hex Employee.png" type="Texture" id=3]
+[ext_resource path="res://Menus/Character.gd" type="Script" id=4]
 [ext_resource path="res://Menus/BackButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Menus/UITheme.tres" type="Theme" id=6]
+[ext_resource path="res://Menus/Fonts/PageHeader.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Menus/ActionBoxTheme.tres" type="Theme" id=7]
-[ext_resource path="res://Menus/SceneSwitching.gd" type="Script" id=8]
+[ext_resource path="res://Menus/Fonts/SubHeader.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Menus/Recruitment/RecruitmentButton.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Hex Employee.bmp" type="BitMap" id=10]
-[ext_resource path="res://Menus/Character.gd" type="Script" id=11]
+[ext_resource path="res://Menus/Recruitment/AutoRecruiters.gd" type="Script" id=10]
+
 
 [node name="Recruitment" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 0.999644
 margin_left = 1.01807
 margin_right = 1.01807
-theme = ExtResource( 6 )
-script = ExtResource( 8 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Hex Employee" type="TextureButton" parent="."]
 anchor_right = 0.397
-anchor_bottom = 1.553
+anchor_bottom = 1.0
 margin_right = -10.24
 margin_bottom = -22.6428
 rect_min_size = Vector2( 752, 1654 )
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 1 )
-texture_click_mask = ExtResource( 10 )
+texture_normal = ExtResource( 3 )
 expand = true
-script = ExtResource( 11 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,7 +59,7 @@ margin_left = 930.541
 margin_top = 52.3127
 margin_right = 1885.54
 margin_bottom = 228.313
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 6 )
 text = "RECRUITMENT"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -103,7 +102,7 @@ margin_bottom = 260.0
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer"]
 margin_right = 864.0
 margin_bottom = 79.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 8 )
 text = "Manual Recruitment"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
@@ -125,7 +124,7 @@ margin_right = 864.0
 margin_bottom = 115.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 8 )
 enabled_focus_mode = 0
 text = "CLICK ME"
 
@@ -147,18 +146,18 @@ margin_bottom = 298.0
 [node name="Label" type="Label" parent="VBoxContainer/AutoRecruitersContainer/VBoxContainer"]
 margin_right = 864.0
 margin_bottom = 79.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 8 )
 text = "Auto-Recruiters"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AutoRecruitersContainer/VBoxContainer" groups=[
+"display",
 "auto-recruiter",
 "buildings",
-"display",
 ]]
 margin_top = 143.0
 margin_right = 864.0
 margin_bottom = 296.0
-script = ExtResource( 4 )
+script = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="VBoxContainer/AutoRecruitersContainer/VBoxContainer/HBoxContainer"]
 margin_right = 555.0
@@ -173,7 +172,7 @@ margin_right = 856.0
 margin_bottom = 153.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 8 )
 enabled_focus_mode = 0
 text = "    BUY    "
 [connection signal="pressed" from="Back" to="." method="_on_back"]
